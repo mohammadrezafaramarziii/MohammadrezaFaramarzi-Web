@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@font-face {
+    font-family: "Bakh";
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/bakh_Medium.woff');
+}
+*{
+    user-select: none
+}
+/* width */
+*::-webkit-scrollbar {
+    width: 10px;
+}
+  
+  /* Track */
+*::-webkit-scrollbar-track {
+    background: #cbd5e1;
+}
+  
+  /* Handle */
+*::-webkit-scrollbar-thumb {
+    background: #64748b;
+    border-radius: 3px;
+}
+  
+  /* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+}
+.section-title::after,
+.section-title::before{
+    content: "";
+    width: 50%;
+    height: 2px;
+    background-color: #cbd5e1;
+    border-radius: 50px;
+    position: absolute;
+    top: 25px;
+}
+
+.section-title::after{
+    left: 120px;
+}
+
+.section-title::before{
+    right: 120px;
+}
+
+@media (min-width: 640px) {
+    .section-title::after,
+    .section-title::before{
+        width: 100%;
+    }
+}
+.exam-work:hover .exam-work-hover{
+    opacity: 1;
+}
+@tailwind utilities;

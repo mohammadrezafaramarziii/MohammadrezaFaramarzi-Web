@@ -1,0 +1,19 @@
+{
+  "name": "mrf-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tw": "tailwindcss -i ./assets/css/style.css -o ./assets/css/main.css",
+    "tw-w": "tailwindcss -i ./assets/css/style.css -o ./assets/css/main.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.2.7"
+  },
+  "dependencies": {
+    "swiper": "^9.1.0"
+  }
+}

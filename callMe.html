@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRF Web</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="font-body bg-slate-100 scroll-smooth">
+    
+    <!-- ---------- header start ---------- -->
+    <header class="w-full mb-10">
+
+        <!-- ----- navbar start ----- -->
+        <nav class="w-full h-12 fixed flex items-center justify-between px-4 backdrop-blur bg-slate-300/50 z-20">
+            <!-- background shadow in menu -->
+            <div id="shadow-menu" class="fixed hidden top-0 right-0 w-full h-screen duration-200 backdrop-blur bg-slate-500/70"></div>
+
+            <!-- menu and items -->
+            <menu id="menu" class="fixed md:static top-0 right-0 w-56 md:w-auto h-screen md:h-full translate-x-[100%] md:translate-x-[0%] duration-500 ease-in-out bg-white md:bg-transparent shadow-md md:shadow-none">
+                <div class="w-full h-full flex flex-col items-center justify-start md:justify-center gap-3 md:gap-0">
+                   <!-- close menu button -->
+                    <div class="w-full flex md:hidden items-center justify-end text-slate-500 mb-5 p-2">
+                        <button id="btn-close-menu" class="hover:bg-gray-200 p-1 rounded-full duration-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+                                <g fill="none" fill-rule="evenodd">
+                                    <path d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"/><path fill="currentColor" d="m12 13.414l5.657 5.657a1 1 0 0 0 1.414-1.414L13.414 12l5.657-5.657a1 1 0 0 0-1.414-1.414L12 10.586L6.343 4.929A1 1 0 0 0 4.93 6.343L10.586 12l-5.657 5.657a1 1 0 1 0 1.414 1.414L12 13.414Z"/>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- menu logo -->
+                    <div class="mt-5 md:hidden">
+                        <img src="./assets/img/logo.png" alt="logo" class="w-28">
+                    </div>
+
+                    <!-- menu items -->
+                    <div id="items-menu" class="w-full md:h-full flex flex-col md:flex-row mt-5 md:m-0">
+                        <a href="index.html" class="w-full md:w-auto block md:flex md:items-center md:justify-center py-3 px-2 hover:pr-5 md:hover:pr-4 md:hover:pb-2 md:px-4 md:py-0 duration-200 text-slate-900 md:text-slate-900 hover:text-red-500 border-b-[1px]">
+                            صفحه اصلی
+                        </a>
+                        <a href="callMe.html" class="md:border-b-2 md:border-b-red-500 w-full md:w-auto block md:flex md:items-center md:justify-center py-3 px-2 hover:pr-5 md:hover:pr-4 md:hover:pb-2 md:px-4 md:py-0 duration-200 text-slate-900 md:text-slate-900 hover:text-red-500 border-b-[1px]">
+                            تماس با من
+                        </a>
+                    </div>
+                </div>
+            </menu>
+
+            <!-- open menu button -->
+            <div class="h-full flex md:hidden items-center justify-between text-red-500">
+                <button id="btn-open-menu" class="hover:text-red-600 hover:pr-2 p-1 rounded-lg duration-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M22 18.005c0 .55-.446.995-.995.995h-8.01a.995.995 0 0 1 0-1.99h8.01c.55 0 .995.445.995.995ZM22 12c0 .55-.446.995-.995.995H2.995a.995.995 0 1 1 0-1.99h18.01c.55 0 .995.446.995.995Zm-.995-5.01a.995.995 0 0 0 0-1.99H8.995a.995.995 0 1 0 0 1.99h12.01Z"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- my name -->
+            <div> 
+                <a href="#">
+                    <h2 class="text-slate-900 font-semibold text-lg">محمدرضا فرامرزی</h2>
+                </a>
+            </div>
+
+        </nav>
+        <!-- ----- navbar end ----- -->
+
+
+
+        <!-- ----- logo start ----- -->
+        <section class="w-full pt-20 flex items-center justify-center">
+            <a href="#" class="hover:scale-105 duration-300 ease-in-out">
+                <img src="./assets/img/logo.png" alt="logo" class="w-36">
+            </a>
+        </section>
+        <!-- ----- logo end ----- -->
+
+    </header>
+    <!-- ---------- header end ---------- -->
+
+
+
+
+
+    <!-- ---------- call me box start ---------- -->
+    <section class="md:w-[85%] md:rounded-2xl md:mx-auto flex flex-col md:flex-row items-start justify-center bg-white shadow-custome gap-10 mb-20 p-3 md:p-16">
+       
+        <!-- ------ title start ------ -->
+        <div class="w-full">
+            <div class="mb-5 py-4 md:py-0">
+                <h2 class="text-3xl text-slate-800 font-semibold">ارتباط با من</h2>
+            </div>
+
+            <div>
+                <li class="list-none flex items-center gap-2 mb-2">
+                    <span class="text-red-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512">
+                            <path fill="currentColor" d="M391 480c-19.52 0-46.94-7.06-88-30c-49.93-28-88.55-53.85-138.21-103.38C116.91 298.77 93.61 267.79 61 208.45c-36.84-67-30.56-102.12-23.54-117.13C45.82 73.38 58.16 62.65 74.11 52a176.3 176.3 0 0 1 28.64-15.2c1-.43 1.93-.84 2.76-1.21c4.95-2.23 12.45-5.6 21.95-2c6.34 2.38 12 7.25 20.86 16c18.17 17.92 43 57.83 52.16 77.43c6.15 13.21 10.22 21.93 10.23 31.71c0 11.45-5.76 20.28-12.75 29.81c-1.31 1.79-2.61 3.5-3.87 5.16c-7.61 10-9.28 12.89-8.18 18.05c2.23 10.37 18.86 41.24 46.19 68.51s57.31 42.85 67.72 45.07c5.38 1.15 8.33-.59 18.65-8.47c1.48-1.13 3-2.3 4.59-3.47c10.66-7.93 19.08-13.54 30.26-13.54h.06c9.73 0 18.06 4.22 31.86 11.18c18 9.08 59.11 33.59 77.14 51.78c8.77 8.84 13.66 14.48 16.05 20.81c3.6 9.53.21 17-2 22c-.37.83-.78 1.74-1.21 2.75a176.49 176.49 0 0 1-15.29 28.58c-10.63 15.9-21.4 28.21-39.38 36.58A67.42 67.42 0 0 1 391 480Z"/>
+                        </svg>
+                    </span>
+                    <span class="font-en text-slate-800 text-sm">
+                        09365456309
+                    </span>
+                </li>
+
+                <li class="list-none flex items-center gap-2">
+                    <span class="text-red-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M12 22q-2.05 0-3.875-.788q-1.825-.787-3.187-2.15q-1.363-1.362-2.15-3.187Q2 14.05 2 12q0-2.075.788-3.887q.787-1.813 2.15-3.175Q6.3 3.575 8.125 2.787Q9.95 2 12 2q2.075 0 3.887.787q1.813.788 3.175 2.151q1.363 1.362 2.15 3.175Q22 9.925 22 12v1.45q0 1.475-1.012 2.512Q19.975 17 18.5 17q-.9 0-1.675-.4t-1.275-1.05q-.675.675-1.587 1.063Q13.05 17 12 17q-2.075 0-3.537-1.463Q7 14.075 7 12t1.463-3.538Q9.925 7 12 7t3.538 1.462Q17 9.925 17 12v1.45q0 .725.45 1.137q.45.413 1.05.413q.6 0 1.05-.413q.45-.412.45-1.137V12q0-3.275-2.363-5.638Q15.275 4 12 4Q8.725 4 6.362 6.362Q4 8.725 4 12t2.362 5.637Q8.725 20 12 20h5v2Zm0-7q1.25 0 2.125-.875T15 12q0-1.25-.875-2.125T12 9q-1.25 0-2.125.875T9 12q0 1.25.875 2.125T12 15Z"/>
+                        </svg>
+                    </span>
+                    <a href="#" class="font-en text-slate-800 text-sm">
+                        mf575583@gmail.com
+                    </a>
+                </li>
+            </div>
+        </div>
+        <!-- ------ title end ------ -->
+
+
+        <!-- ------ message boxed start ------ -->
+        <div class="w-full">
+            <form action="#" class="flex flex-col items-center justify-center gap-3">
+
+                <input 
+                    type="text" 
+                    placeholder="نام و نام خانوادگی شما..." 
+                    class="w-full py-2 px-3 bg-slate-200 outline-0 rounded-lg text-sm placeholder-slate-400 text-slate-900 duration-200 border-2 border-slate-300 focus:border-red-500"
+                >
+
+                <input 
+                    type="text" 
+                    placeholder="موضوع پیام..." 
+                    class="w-full py-2 px-3 bg-slate-200 outline-0 rounded-lg text-sm placeholder-slate-400 text-slate-900 duration-200 border-2 border-slate-300 focus:border-red-500"
+                >
+
+                <textarea 
+                    rows="10"
+                    placeholder="متن پیام..." 
+                    class="w-full py-2 px-3 bg-slate-200 outline-0 rounded-lg text-sm placeholder-slate-400 text-slate-900 duration-200 border-2 border-slate-300 focus:border-red-500"
+                >
+                </textarea>
+
+                <button type="submit" class="px-5 py-2 bg-slate-200 self-start text-slate-800 text-sm rounded-lg duration-300 hover:bg-red-500 hover:text-white">
+                    ارسال
+                </button>
+
+            </form>
+        </div>
+        <!-- ------ message boxed end ------ -->
+
+    </section>
+    <!-- ---------- call me box end ---------- -->
+
+
+
+
+
+    <!-- ----------- footer start ---------- -->
+    <footer class="bg-slate-300 flex flex-col-reverse md:flex-row items-center justify-between p-5 px-2 md:px-5 gap-3">
+        <div>
+            <p class="text-slate-900 text-sm">تمامی حقوق این سایت متعلق به محمدرضا فرامرزی می باشد. ورژن 1.0.0</p>
+        </div>
+
+        <div class="flex items-center gap-1">
+            <!-- telegram -->
+            <a href="https://t.me/mohammadrezafaramarziii" target="_blank" title="Telegram" class="flex items-center justify-center p-1 rounded-full border-2 border-slate-600 text-slate-600 duration-300 hover:bg-red-500 hover:text-white hover:border-red-500">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 48 48">
+                    <path fill="currentColor" d="M41.42 7.309s3.885-1.515 3.56 2.164c-.107 1.515-1.078 6.818-1.834 12.553l-2.59 16.99s-.216 2.489-2.159 2.922c-1.942.432-4.856-1.515-5.396-1.948c-.432-.325-8.094-5.195-10.792-7.575c-.756-.65-1.62-1.948.108-3.463L33.648 18.13c1.295-1.298 2.59-4.328-2.806-.649l-15.11 10.28s-1.727 1.083-4.964.109l-7.016-2.165s-2.59-1.623 1.835-3.246c10.793-5.086 24.068-10.28 35.831-15.15Z"/>
+                </svg>
+            </a>
+
+            <!-- github -->
+            <a href="https://github.com/mohammadrezafaramarziii" target="_blank" title="Github" class="flex items-center justify-center p-1 rounded-full border-2 border-slate-600 text-slate-600 duration-300 hover:bg-red-500 hover:text-white hover:border-red-500">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24">
+                    <path fill="currentColor" fill-rule="evenodd" d="M11.999 1C5.926 1 1 5.925 1 12c0 4.86 3.152 8.983 7.523 10.437c.55.102.75-.238.75-.53c0-.26-.009-.952-.014-1.87c-3.06.664-3.706-1.475-3.706-1.475c-.5-1.27-1.221-1.61-1.221-1.61c-.999-.681.075-.668.075-.668c1.105.078 1.685 1.134 1.685 1.134c.981 1.68 2.575 1.195 3.202.914c.1-.71.384-1.195.698-1.47c-2.442-.278-5.01-1.222-5.01-5.437c0-1.2.428-2.183 1.132-2.952c-.114-.278-.491-1.397.108-2.91c0 0 .923-.297 3.025 1.127A10.536 10.536 0 0 1 12 6.32a10.49 10.49 0 0 1 2.754.37c2.1-1.424 3.022-1.128 3.022-1.128c.6 1.514.223 2.633.11 2.911c.705.769 1.13 1.751 1.13 2.952c0 4.226-2.572 5.156-5.022 5.428c.395.34.747 1.01.747 2.037c0 1.47-.014 2.657-.014 3.017c0 .295.199.637.756.53C19.851 20.979 23 16.859 23 12c0-6.075-4.926-11-11.001-11"/>
+                </svg>
+            </a>
+
+            <!-- linkedin -->
+            <a href="https://www.linkedin.com/in/mohammadrezafaramarziii/" target="_blank" title="Linkedin" class="flex items-center justify-center p-1 rounded-full border-2 border-slate-600 text-slate-600 duration-300 hover:bg-red-500 hover:text-white hover:border-red-500">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24">
+                    <path fill="currentColor" fill-rule="evenodd" d="M9.429 8.969h3.714v1.85c.535-1.064 1.907-2.02 3.968-2.02c3.951 0 4.889 2.118 4.889 6.004V22h-4v-6.312c0-2.213-.535-3.461-1.897-3.461c-1.889 0-2.674 1.345-2.674 3.46V22h-4V8.969ZM2.57 21.83h4V8.799h-4V21.83ZM7.143 4.55a2.53 2.53 0 0 1-.753 1.802a2.573 2.573 0 0 1-1.82.748a2.59 2.59 0 0 1-1.818-.747A2.548 2.548 0 0 1 2 4.55c0-.677.27-1.325.753-1.803A2.583 2.583 0 0 1 4.571 2c.682 0 1.336.269 1.819.747c.482.478.753 1.126.753 1.803Z" clip-rule="evenodd"/>
+                </svg>
+            </a>
+
+            <!-- email -->
+            <a href="#" target="_blank" title="Email" class="flex items-center justify-center p-1 rounded-full border-2 border-slate-600 text-slate-600 duration-300 hover:bg-red-500 hover:text-white hover:border-red-500">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M12 22q-2.05 0-3.875-.788q-1.825-.787-3.187-2.15q-1.363-1.362-2.15-3.187Q2 14.05 2 12q0-2.075.788-3.887q.787-1.813 2.15-3.175Q6.3 3.575 8.125 2.787Q9.95 2 12 2q2.075 0 3.887.787q1.813.788 3.175 2.151q1.363 1.362 2.15 3.175Q22 9.925 22 12v1.45q0 1.475-1.012 2.512Q19.975 17 18.5 17q-.9 0-1.675-.4t-1.275-1.05q-.675.675-1.587 1.063Q13.05 17 12 17q-2.075 0-3.537-1.463Q7 14.075 7 12t1.463-3.538Q9.925 7 12 7t3.538 1.462Q17 9.925 17 12v1.45q0 .725.45 1.137q.45.413 1.05.413q.6 0 1.05-.413q.45-.412.45-1.137V12q0-3.275-2.363-5.638Q15.275 4 12 4Q8.725 4 6.362 6.362Q4 8.725 4 12t2.362 5.637Q8.725 20 12 20h5v2Zm0-7q1.25 0 2.125-.875T15 12q0-1.25-.875-2.125T12 9q-1.25 0-2.125.875T9 12q0 1.25.875 2.125T12 15Z"/>
+                </svg>
+            </a>
+
+            <!-- call -->
+            <button title="09365456309" class="flex items-center justify-center p-1 rounded-full border-2 border-slate-600 text-slate-600 duration-300 hover:bg-red-500 hover:text-white hover:border-red-500">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 512 512">
+                    <path fill="currentColor" d="M391 480c-19.52 0-46.94-7.06-88-30c-49.93-28-88.55-53.85-138.21-103.38C116.91 298.77 93.61 267.79 61 208.45c-36.84-67-30.56-102.12-23.54-117.13C45.82 73.38 58.16 62.65 74.11 52a176.3 176.3 0 0 1 28.64-15.2c1-.43 1.93-.84 2.76-1.21c4.95-2.23 12.45-5.6 21.95-2c6.34 2.38 12 7.25 20.86 16c18.17 17.92 43 57.83 52.16 77.43c6.15 13.21 10.22 21.93 10.23 31.71c0 11.45-5.76 20.28-12.75 29.81c-1.31 1.79-2.61 3.5-3.87 5.16c-7.61 10-9.28 12.89-8.18 18.05c2.23 10.37 18.86 41.24 46.19 68.51s57.31 42.85 67.72 45.07c5.38 1.15 8.33-.59 18.65-8.47c1.48-1.13 3-2.3 4.59-3.47c10.66-7.93 19.08-13.54 30.26-13.54h.06c9.73 0 18.06 4.22 31.86 11.18c18 9.08 59.11 33.59 77.14 51.78c8.77 8.84 13.66 14.48 16.05 20.81c3.6 9.53.21 17-2 22c-.37.83-.78 1.74-1.21 2.75a176.49 176.49 0 0 1-15.29 28.58c-10.63 15.9-21.4 28.21-39.38 36.58A67.42 67.42 0 0 1 391 480Z"/>
+                </svg>
+            </button>
+
+        </div>
+
+    </footer>
+    <!-- ----------- footer end ---------- -->
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
