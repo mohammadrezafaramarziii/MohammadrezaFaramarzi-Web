@@ -8,6 +8,9 @@
     src: url('../fonts/bakh_Medium.woff');
 }
 *{
+    scroll-behavior: smooth;
+}
+*{
     user-select: none
 }
 /* width */

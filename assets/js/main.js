@@ -1,5 +1,63 @@
 
 
+// --------------- change url start --------------- //
+
+// menu
+var itemsMenu = document.querySelectorAll('#items-menu a');
+
+for (var i = 0; i < itemsMenu.length; i++) {
+  itemsMenu[i].addEventListener('click', function(event) {
+    event.preventDefault();
+    var targetId = this.getAttribute('href');
+    var targetElement = document.getElementById(targetId.slice(1));
+    targetElement.scrollIntoView({behavior: 'smooth'});
+  });
+}
+
+
+// button call data
+const btnGoCallData = document.getElementById('btn-callData');
+const callData = document.getElementById('callData');
+
+btnGoCallData.addEventListener('click', function(event){
+    event.preventDefault();
+    callData.scrollIntoView({behavior: 'smooth'});
+})
+
+
+// name in navbar
+const nameNavbar = document.getElementById('nameNavbar');
+
+nameNavbar.addEventListener('click', function(event){
+    event.preventDefault();
+    document.body.scrollIntoView({behavior: 'smooth'});
+})
+
+
+// logo in top
+const logoLink = document.getElementById('logoLink');
+
+logoLink.addEventListener('click', function(event){
+    event.preventDefault();
+    document.body.scrollIntoView({behavior: 'smooth'});
+})
+
+// --------------- change url end --------------- //
+
+
+
+
+
+// --------------- disable right click start --------------- //
+
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+// --------------- disable right click end --------------- //
+
+
+
+
+
 // --------------- open and close menu start --------------- //
 
 // get element
@@ -31,17 +89,10 @@ shadowMenu.addEventListener('click', function(){
 
 
 
-// document.addEventListener('contextmenu', event => event.preventDefault());
 
+// --------------- example work slider start --------------- //
 
-
-
-
-
-
-
-
-
+// slider config
 $('#example-work-slider').owlCarousel({
     loop:false,
     margin:10,
@@ -67,6 +118,8 @@ $('#example-work-slider').owlCarousel({
     }
 });
 
+
+// next and previus buttons
 $(document).ready(function(){
     $("#btn-next-slide-work").click(function(){
         $("#example-work-slider").trigger('next.owl.carousel');
@@ -76,4 +129,5 @@ $(document).ready(function(){
     });
 });
 
+// --------------- example work slider end --------------- //
 
