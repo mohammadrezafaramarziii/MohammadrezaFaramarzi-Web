@@ -1,5 +1,28 @@
 
 
+// --------------- loader start --------------- //
+
+const loaderBox = document.getElementById('loader-box');
+const allElement = document.getElementById('all-element');
+
+window.onload = () => {
+    setTimeout(function(){
+        loaderBox.classList.add("hidden");
+        allElement.classList.remove("hidden");    
+    }, 2000)
+}
+
+// --------------- loader end --------------- //
+
+
+
+
+
+
+
+
+
+
 // --------------- change menu in scroll start --------------- //
 
 let classList = [

@@ -952,6 +952,11 @@ video {
   border-color: rgb(226 232 240 / var(--tw-border-opacity));
 }
 
+.\!bg-slate-800 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity)) !important;
+}
+
 .bg-black\/20 {
   background-color: rgb(0 0 0 / 0.2);
 }
@@ -986,6 +991,26 @@ video {
 
 .bg-white\/30 {
   background-color: rgb(255 255 255 / 0.3);
+}
+
+.bg-slate-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+}
+
+.bg-slate-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+}
+
+.bg-slate-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
+}
+
+.bg-slate-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\.\.\/img\/gabe-logan-newell\.jpg\'\)\] {
