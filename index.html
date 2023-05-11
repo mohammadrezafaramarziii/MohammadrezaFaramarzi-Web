@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="fa">
+<html id="html" dir="rtl" lang="fa" class="light">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,648 +9,1220 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="font-body relative h-full bg-slate-100">
+<body class="light-scroll h-full font-body relative bg-white dark:bg-slate-900 md:!overflow-none">
     
-    <!-- ---------- header start ---------- -->
-    <header class="w-full">
+    <!-- *************** header start *************** -->
+    <header id="index" class="w-full lg:h-screen duration-300">
 
         <!-- ----- navbar start ----- -->
-        <nav class="w-full h-12 fixed flex items-center justify-between px-4 backdrop-blur bg-slate-300/50 z-20">
-            <!-- background shadow in menu -->
-            <div id="shadow-menu" class="fixed hidden top-0 right-0 w-full h-screen duration-200 backdrop-blur bg-slate-500/70"></div>
+        <nav id="nav" class="w-full flex flex-row-reverse items-center justify-between py-10 px-6 md:p-10 duration-300 ease-in-out backdrop-blur bg-white/30 dark:bg-slate-900/30 z-20">
 
-            <!-- menu and items -->
-            <menu id="menu" class="fixed md:static top-0 right-0 w-56 md:w-auto h-screen md:h-full translate-x-[100%] md:translate-x-[0%] duration-500 ease-in-out bg-white md:bg-transparent shadow-md md:shadow-none">
-                <div class="w-full h-full flex flex-col items-center justify-start md:justify-center gap-3 md:gap-0">
-                   <!-- close menu button -->
-                    <div class="w-full flex md:hidden items-center justify-end text-slate-500 mb-5 p-2">
-                        <button id="btn-close-menu" class="hover:bg-gray-200 p-1 rounded-full duration-200">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
-                                <g fill="none" fill-rule="evenodd">
-                                    <path d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"/><path fill="currentColor" d="m12 13.414l5.657 5.657a1 1 0 0 0 1.414-1.414L13.414 12l5.657-5.657a1 1 0 0 0-1.414-1.414L12 10.586L6.343 4.929A1 1 0 0 0 4.93 6.343L10.586 12l-5.657 5.657a1 1 0 1 0 1.414 1.414L12 13.414Z"/>
-                                </g>
-                            </svg>
-                        </button>
-                    </div>
-
-                    <!-- menu logo -->
-                    <div class="mt-5 md:hidden">
-                        <img src="./assets/img/logo.png" alt="logo" class="w-28">
-                    </div>
-
-                    <!-- menu items -->
-                    <div id="items-menu" class="w-full md:h-full flex flex-col md:flex-row mt-5 md:m-0">
-                        <a href="#home" data-target="home" class="w-full md:w-auto block md:flex md:items-center md:justify-center py-3 px-2 hover:pr-5 md:hover:pr-4 md:hover:pb-2 md:px-4 md:py-0 duration-200 text-slate-900 md:text-slate-900 hover:text-red-500 border-b-[1px]">
-                            خانه
-                        </a>
-                        <a href="#aboutme" data-target="aboutme" class="w-full md:w-auto block md:flex md:items-center md:justify-center py-3 px-2 hover:pr-5 md:hover:pr-4 md:hover:pb-2 md:px-4 md:py-0 duration-200 text-slate-900 md:text-slate-900 hover:text-red-500 border-b-[1px] md:border-0">
-                            درباره من
-                        </a>
-                        <a href="#skill" data-target="skill" class="w-full md:w-auto block md:flex md:items-center md:justify-center py-3 px-2 hover:pr-5 md:hover:pr-4 md:hover:pb-2 md:px-4 md:py-0 duration-200 text-slate-900 md:text-slate-900 hover:text-red-500 border-b-[1px] md:border-0">
-                            تخصص های من
-                        </a>
-                        <a href="#tools" data-target="tools" class="w-full md:w-auto block md:flex md:items-center md:justify-center py-3 px-2 hover:pr-5 md:hover:pr-4 md:hover:pb-2 md:px-4 md:py-0 duration-200 text-slate-900 md:text-slate-900 hover:text-red-500 border-b-[1px] md:border-0">
-                            مهارت های من
-                        </a>
-                        <a href="#workExample" data-target="workExample" class="w-full md:w-auto block md:flex md:items-center md:justify-center py-3 px-2 hover:pr-5 md:hover:pr-4 md:hover:pb-2 md:px-4 md:py-0 duration-200 text-slate-900 md:text-slate-900 hover:text-red-500 border-b-[1px] md:border-0">
-                            نمونه کار ها
-                        </a>
-                        <a href="#callData" data-target="callData" class="w-full md:w-auto block md:flex md:items-center md:justify-center py-3 px-2 hover:pr-5 md:hover:pr-4 md:hover:pb-2 md:px-4 md:py-0 duration-200 text-slate-900 md:text-slate-900 hover:text-red-500 border-b-[1px] md:border-0">
-                            راه های ارتباطی
-                        </a>
-                    </div>
-                </div>
-            </menu>
-
-            <!-- open menu button -->
-            <div class="h-full flex md:hidden items-center justify-between text-red-500">
-                <button id="btn-open-menu" class="hover:text-red-600 hover:pr-2 p-1 rounded-lg duration-200">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M22 18.005c0 .55-.446.995-.995.995h-8.01a.995.995 0 0 1 0-1.99h8.01c.55 0 .995.445.995.995ZM22 12c0 .55-.446.995-.995.995H2.995a.995.995 0 1 1 0-1.99h18.01c.55 0 .995.446.995.995Zm-.995-5.01a.995.995 0 0 0 0-1.99H8.995a.995.995 0 1 0 0 1.99h12.01Z"/>
-                    </svg>
-                </button>
-            </div>
-
-            <!-- my name -->
-            <div> 
-                <a href="#" id="nameNavbar">
-                    <h2 class="text-slate-900 font-semibold text-lg">محمدرضا فرامرزی</h2>
+            <!-- logo start -->
+            <div>
+                <a href="#" id="logoLink">
+                    <img src="./assets/img/logo-light.svg" alt="logo" id="logo" class="w-20">
                 </a>
             </div>
+            <!-- logo start -->
+
+
+
+            <!-- menu in mobile start -->
+            <div class="md:hidden">
+
+                <!-- buttons -->
+                <div class="text-slate-500 dark:text-slate-400 flex items-center justify-center gap-2">
+                    <!-- open menu button -->
+                    <button id="btn-open-menu" class="hover:text-slate-600 duration-100 dark:hover:text-slate-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 32 32"><circle cx="16" cy="8" r="2" fill="currentColor"/><circle cx="16" cy="16" r="2" fill="currentColor"/><circle cx="16" cy="24" r="2" fill="currentColor"/></svg>
+                    </button>
+
+                    <!-- open my profile button -->
+                    <button id="btn-open-profile-mob" class="hover:text-slate-600 duration-100 dark:hover:text-slate-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24"><path fill="currentColor" d="M2 6.5c0-2.121 0-3.182.659-3.841C3.318 2 4.379 2 6.5 2c2.121 0 3.182 0 3.841.659C11 3.318 11 4.379 11 6.5c0 2.121 0 3.182-.659 3.841C9.682 11 8.621 11 6.5 11c-2.121 0-3.182 0-3.841-.659C2 9.682 2 8.621 2 6.5Zm11 11c0-2.121 0-3.182.659-3.841C14.318 13 15.379 13 17.5 13c2.121 0 3.182 0 3.841.659c.659.659.659 1.72.659 3.841c0 2.121 0 3.182-.659 3.841c-.659.659-1.72.659-3.841.659c-2.121 0-3.182 0-3.841-.659C13 20.682 13 19.621 13 17.5Zm-11 0c0-2.121 0-3.182.659-3.841C3.318 13 4.379 13 6.5 13c2.121 0 3.182 0 3.841.659c.659.659.659 1.72.659 3.841c0 2.121 0 3.182-.659 3.841C9.682 22 8.621 22 6.5 22c-2.121 0-3.182 0-3.841-.659C2 20.682 2 19.621 2 17.5Zm11-11c0-2.121 0-3.182.659-3.841C14.318 2 15.379 2 17.5 2c2.121 0 3.182 0 3.841.659C22 3.318 22 4.379 22 6.5c0 2.121 0 3.182-.659 3.841c-.659.659-1.72.659-3.841.659c-2.121 0-3.182 0-3.841-.659C13 9.682 13 8.621 13 6.5Z"/></svg>
+                    </button>
+                </div>
+            </div>
+            <!-- menu in mobile start -->
+
+
+
+
+            <!-- menu in desktop start -->
+            <div class="hidden md:flex items-center gap-5">
+
+                <!-- options -->
+                <div class="flex items-center justify-between gap-3 text-slate-500 dark:text-slate-400 border-l border-slate-200 dark:border-slate-200/30 pl-5">
+                    <button id="btn-open-profile-desk" class="duration-100 hover:text-slate-600 dark:hover:text-slate-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M2 6.5c0-2.121 0-3.182.659-3.841C3.318 2 4.379 2 6.5 2c2.121 0 3.182 0 3.841.659C11 3.318 11 4.379 11 6.5c0 2.121 0 3.182-.659 3.841C9.682 11 8.621 11 6.5 11c-2.121 0-3.182 0-3.841-.659C2 9.682 2 8.621 2 6.5Zm11 11c0-2.121 0-3.182.659-3.841C14.318 13 15.379 13 17.5 13c2.121 0 3.182 0 3.841.659c.659.659.659 1.72.659 3.841c0 2.121 0 3.182-.659 3.841c-.659.659-1.72.659-3.841.659c-2.121 0-3.182 0-3.841-.659C13 20.682 13 19.621 13 17.5Zm-11 0c0-2.121 0-3.182.659-3.841C3.318 13 4.379 13 6.5 13c2.121 0 3.182 0 3.841.659c.659.659.659 1.72.659 3.841c0 2.121 0 3.182-.659 3.841C9.682 22 8.621 22 6.5 22c-2.121 0-3.182 0-3.841-.659C2 20.682 2 19.621 2 17.5Zm11-11c0-2.121 0-3.182.659-3.841C14.318 2 15.379 2 17.5 2c2.121 0 3.182 0 3.841.659C22 3.318 22 4.379 22 6.5c0 2.121 0 3.182-.659 3.841c-.659.659-1.72.659-3.841.659c-2.121 0-3.182 0-3.841-.659C13 9.682 13 8.621 13 6.5Z"/></svg>
+                    </button>
+
+                    <button id="btn-dark-mode-desk" class="btn-dark-mode  duration-100 hover:text-slate-600 dark:hover:text-slate-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><g fill="currentColor"><path d="M18 12a6 6 0 1 1-12 0a6 6 0 0 1 12 0Z"/><path fill-rule="evenodd" d="M12 1.25a.75.75 0 0 1 .75.75v1a.75.75 0 0 1-1.5 0V2a.75.75 0 0 1 .75-.75ZM4.399 4.399a.75.75 0 0 1 1.06 0l.393.392a.75.75 0 0 1-1.06 1.061l-.393-.393a.75.75 0 0 1 0-1.06Zm15.202 0a.75.75 0 0 1 0 1.06l-.393.393a.75.75 0 0 1-1.06-1.06l.393-.393a.75.75 0 0 1 1.06 0ZM1.25 12a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5H2a.75.75 0 0 1-.75-.75Zm19 0a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75Zm-2.102 6.148a.75.75 0 0 1 1.06 0l.393.393a.75.75 0 1 1-1.06 1.06l-.393-.393a.75.75 0 0 1 0-1.06Zm-12.296 0a.75.75 0 0 1 0 1.06l-.393.393a.75.75 0 1 1-1.06-1.06l.392-.393a.75.75 0 0 1 1.061 0ZM12 20.25a.75.75 0 0 1 .75.75v1a.75.75 0 0 1-1.5 0v-1a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd"/></g></svg>                    
+                    </button>
+
+                    <button onclick="Download(event)" class="duration-100 hover:text-slate-600 dark:hover:text-slate-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Zm10-5.75a.75.75 0 0 1 .75.75v5.19l1.72-1.72a.75.75 0 1 1 1.06 1.06l-3 3a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06l1.72 1.72V7a.75.75 0 0 1 .75-.75Zm-4 10a.75.75 0 0 0 0 1.5h8a.75.75 0 0 0 0-1.5H8Z" clip-rule="evenodd"/></svg>
+                    </button>
+                </div>
+
+                <menu class="text-slate-700 dark:text-slate-200">
+                    <ul id="items-menu-desk" class="flex items-center gap-7">
+                        <!-- item 1 -->
+                        <a href="#index" class="hover:text-red-400 duration-100">
+                            خانه
+                        </a>
+                        
+                        <!-- item 2 -->
+                        <a href="#aboutme" class="hover:text-red-400 duration-100">
+                            درباره من
+                        </a>
+                        
+                        <!-- item 3 -->
+                        <a href="#skills" class="hover:text-red-400 duration-100">
+                            مهارت ها
+                        </a>
+
+                        <!-- item 4 -->
+                        <a href="#work-data" class="hover:text-red-400 duration-100">
+                            سوابق
+                        </a>
+                        
+                        <!-- item 5 -->
+                        <a href="#works" class="hover:text-red-400 duration-100">
+                            نمونه کار ها
+                        </a>
+
+                        <!-- item 6 -->
+                        <a href="#callme" class="hover:text-red-400 duration-100">
+                            همکاری با من
+                        </a>
+                    </ul>
+                </menu>
+            </div>
+            <!-- menu in desktop end -->
 
         </nav>
-        <!-- ----- navbar end ----- -->
-
-
-
-        <!-- ----- logo start ----- -->
-        <section class="w-full pt-20 flex items-center justify-center">
-            <a href="#" id="logoLink" class="hover:scale-105 duration-300 ease-in-out">
-                <img src="./assets/img/logo.png" alt="logo" class="w-36">
-            </a>
-        </section>
-        <!-- ----- logo end ----- -->
-
-    </header>
-    <!-- ---------- header end ---------- -->
+        <!-- ----- navbar start ----- -->
 
 
 
 
+        <!-- ----- menu mobile start ----- -->
+        <div id="shadow-menu" class="w-full h-screen hidden md:!hidden fixed top-0 right-0 bg-black/20 dark:bg-slate-900/80 backdrop-blur-sm z-30"></div>
+        <menu id="menu" class="w-[90%] fixed top-5 right-[-50%] translate-x-[-61%] sm:right-5 sm:translate-x-[0] hidden md:!hidden sm:w-1/2 bg-white dark:bg-slate-800 rounded-xl shadow-lg p-7 duration-300 z-30">
+            
+            <!-- close menu button -->
+            <button id="btn-close-menu" class="absolute top-5 left-5 text-slate-500 dark:text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 duration-100">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144m224 0L144 368"/></svg>
+            </button>
 
-    <div class="flex flex-col gap-20 my-20">
-        <!-- ---------- profile start ---------- -->
-        <section id="home" class="md:w-[85%] md:rounded-2xl md:mx-auto flex flex-col md:flex-row-reverse items-center justify-center bg-white shadow-custome gap-10 py-8 md:py-16 px-3">
+            <!-- items menu -->
+            <div onclick="closeMenu()">
+                <ul id="items-menu-mob" class="flex flex-col gap-7 text-slate-900 dark:text-slate-400 font-bold">
+                    <!-- item 1 -->
+                    <a href="#index" class="hover:text-red-400 duration-100">
+                        خانه
+                    </a>
+                    
+                    <!-- item 2 -->
+                    <a href="#aboutme" class="hover:text-red-400 duration-100">
+                        درباره من
+                    </a>
+                    
+                    <!-- item 3 -->
+                    <a href="#skills" class="hover:text-red-400 duration-100">
+                        مهارت ها
+                    </a>
 
-            <!-- ----- profile start ----- -->
-            <div class="flex flex-col md:w-full items-center justify-center gap-2">
+                    <!-- item 4 -->
+                    <a href="#work-data" class="hover:text-red-400 duration-100">
+                        سوابق
+                    </a>
 
-                <!-- picture -->
-                <div class="w-full flex items-center justify-center">
-                    <img src="./assets/img/Profile.jpg" alt="my picture" class="w-48 md:w-64 rounded-full shadow-lg">
+                    <!-- item 5 -->
+                    <a href="#works" class="hover:text-red-400 duration-100">
+                        نمونه کار ها
+                    </a>
+
+                    <!-- item 6 -->
+                    <a href="#callme" class="hover:text-red-400 duration-100">
+                        همکاری با من
+                    </a>
+                </ul>
+            </div>
+
+            <!-- options menu -->
+            <div class="border-t border-slate-200 dark:border-slate-200/10 mt-4 pt-4 text-slate-900 dark:text-slate-400 font-bold">
+                <button onclick="Download(event)" class="w-full flex items-center gap-2 text-sm duration-100 hover:text-red-400 mb-4">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Zm10-5.75a.75.75 0 0 1 .75.75v5.19l1.72-1.72a.75.75 0 1 1 1.06 1.06l-3 3a.75.75 0 0 1-1.06 0l-3-3a.75.75 0 1 1 1.06-1.06l1.72 1.72V7a.75.75 0 0 1 .75-.75Zm-4 10a.75.75 0 0 0 0 1.5h8a.75.75 0 0 0 0-1.5H8Z" clip-rule="evenodd"/></svg>
+                    </span>
+                    <span>
+                        دانلود رزومه
+                    </span>
+                </button>
+
+                <button id="btn-dark-mode-mob" class="w-full flex items-center gap-2 text-sm duration-100 hover:text-red-400">
+                    <span id="icon-dark-mode-mob">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><g fill="currentColor"><path d="M18 12a6 6 0 1 1-12 0a6 6 0 0 1 12 0Z"/><path fill-rule="evenodd" d="M12 1.25a.75.75 0 0 1 .75.75v1a.75.75 0 0 1-1.5 0V2a.75.75 0 0 1 .75-.75ZM4.399 4.399a.75.75 0 0 1 1.06 0l.393.392a.75.75 0 0 1-1.06 1.061l-.393-.393a.75.75 0 0 1 0-1.06Zm15.202 0a.75.75 0 0 1 0 1.06l-.393.393a.75.75 0 0 1-1.06-1.06l.393-.393a.75.75 0 0 1 1.06 0ZM1.25 12a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5H2a.75.75 0 0 1-.75-.75Zm19 0a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75Zm-2.102 6.148a.75.75 0 0 1 1.06 0l.393.393a.75.75 0 1 1-1.06 1.06l-.393-.393a.75.75 0 0 1 0-1.06Zm-12.296 0a.75.75 0 0 1 0 1.06l-.393.393a.75.75 0 1 1-1.06-1.06l.392-.393a.75.75 0 0 1 1.061 0ZM12 20.25a.75.75 0 0 1 .75.75v1a.75.75 0 0 1-1.5 0v-1a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd"/></g></svg>                            
+                    </span>
+                    <span id="text-dark-mode-mob">
+                        تم روشن
+                    </span>
+                </button>
+            </div>
+        </menu>
+        <!-- ----- menu mobile end ----- -->
+        
+
+
+        
+        <!-- ----- profile box start ----- -->
+        <div id="profile-box" class="w-full h-full p-5 fixed hidden items-center justify-center top-0 right-0 bg-slate-900/50 backdrop-blur-sm z-30">
+            <div class="profile-box relative w-full sm:w-[60%] lg:w-[40%] xl:w-[30%] h-full flex flex-col justify-between bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-5 gap-5 overflow-y-scroll">
+
+                <button id="btn-close-profile" class="absolute top-5 left-5 text-slate-500 dark:text-slate-400 duration-100 hover:text-slate-600 dark:hover:text-slate-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144m224 0L144 368"/></svg>
+                </button>
+
+                <!-- my picture -->
+                <div class="flex items-center justify-center">
+                    <img src="./assets/img/MyProfile.jpg" alt="my picture" class="w-36 rounded-3xl">
+                </div>
+
+                <!-- my name and bio -->
+                <div class="flex flex-col items-center gap-3">
+                    <h2 class="text-3xl font-bold text-slate-800 dark:text-slate-200">
+                        محمدرضا فرامرزی
+                    </h2>
+
+                    <h5 class="bg-slate-100 dark:bg-slate-700 text-sm text-slate-900 dark:text-slate-200 py-1 px-3 rounded-full">
+                        توسعه دهنده فرانت اند
+                    </h5>
                 </div>
 
                 <!-- social media -->
-                <div class="flex items-center gap-1">
+                <div class="flex flex-col justify-center gap-1">
                     <!-- telegram -->
-                    <a href="https://t.me/mohammadrezafaramarziii" target="_blank" title="Telegram" class="flex items-center justify-center p-1 rounded-full border-2 border-slate-600 text-slate-600 duration-300 hover:bg-red-500 hover:text-white hover:border-red-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 48 48">
-                            <path fill="currentColor" d="M41.42 7.309s3.885-1.515 3.56 2.164c-.107 1.515-1.078 6.818-1.834 12.553l-2.59 16.99s-.216 2.489-2.159 2.922c-1.942.432-4.856-1.515-5.396-1.948c-.432-.325-8.094-5.195-10.792-7.575c-.756-.65-1.62-1.948.108-3.463L33.648 18.13c1.295-1.298 2.59-4.328-2.806-.649l-15.11 10.28s-1.727 1.083-4.964.109l-7.016-2.165s-2.59-1.623 1.835-3.246c10.793-5.086 24.068-10.28 35.831-15.15Z"/>
-                        </svg>
+                    <a href="https://t.me/mohammadrezafaramarziii" class="social-media relative flex overflow-hidden items-center justify-between text-slate-700 dark:text-slate-200 duration-100 p-3 rounded-xl">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"/><path fill="currentColor" d="M19.777 4.43a1.5 1.5 0 0 1 2.062 1.626l-2.268 13.757c-.22 1.327-1.676 2.088-2.893 1.427c-1.018-.553-2.53-1.405-3.89-2.294c-.68-.445-2.763-1.87-2.507-2.884c.22-.867 3.72-4.125 5.72-6.062c.785-.761.427-1.2-.5-.5c-2.303 1.738-5.998 4.381-7.22 5.125c-1.078.656-1.64.768-2.312.656c-1.226-.204-2.363-.52-3.291-.905c-1.254-.52-1.193-2.244-.001-2.746l17.1-7.2Z"/></g></svg>
+                        </span>
+
+                        <span class="font-bold">
+                            تلگرام
+                        </span>
+
+                        <span class="icon-go absolute left-[-100%] duration-300 ease-in-out z-20 text-slate-900 dark:text-slate-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><g fill="currentColor"><path d="m12.332 5.184l4.977 4.424c.93.827 1.396 1.241 1.568 1.73a2 2 0 0 1 0 1.325c-.172.488-.637.902-1.568 1.729l-4.978 4.425c-.422.375-.633.563-.812.57a.5.5 0 0 1-.405-.182C11 19.066 11 18.784 11 18.219v-2.79c-2.428 0-4.993.78-6.865 2.164c-.975.72-1.463 1.08-1.648 1.067a.451.451 0 0 1-.39-.24c-.096-.16-.011-.658.159-1.653C3.361 10.3 7.811 8.57 11 8.57V5.78c0-.565 0-.847.114-.986a.5.5 0 0 1 .405-.181c.18.006.39.194.813.57Z"/><path fill-rule="evenodd" d="M14.989 3.99a.75.75 0 0 1 1.06-.04l5.216 4.844a4.647 4.647 0 0 1-.15 6.944l-5.09 4.333a.75.75 0 1 1-.973-1.142l5.09-4.333a3.147 3.147 0 0 0 .102-4.703L15.028 5.05a.75.75 0 0 1-.04-1.06Z" clip-rule="evenodd"/></g></svg>
+                        </span>
+
+                        <span class="text-go absolute top-[28%] right-[-100%] duration-300 ease-in-out z-20 font-bold text-slate-900 dark:text-slate-200">
+                            برو به تلگرام
+                        </span>
+                        
+                        <div class="shadow-go absolute w-full h-full top-0 right-0 opacity-0 duration-300 ease-in-out iShow2 bg-slate-200/50 dark:bg-slate-900/50 backdrop-blur-sm z-10"></div>
+                    </a>
+
+                    <!-- instagram -->
+                    <a href="https://instagram.com/mohammadrezafaramarziii" class="social-media relative flex overflow-hidden items-center justify-between text-slate-700 dark:text-slate-200 duration-100 p-3 rounded-xl">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.947 8.305a6.53 6.53 0 0 0-.419-2.216a4.61 4.61 0 0 0-2.633-2.633a6.606 6.606 0 0 0-2.186-.42c-.962-.043-1.267-.055-3.709-.055s-2.755 0-3.71.055a6.606 6.606 0 0 0-2.185.42a4.607 4.607 0 0 0-2.633 2.633a6.554 6.554 0 0 0-.419 2.185c-.043.963-.056 1.268-.056 3.71s0 2.754.056 3.71c.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632a6.584 6.584 0 0 0 2.185.45c.963.043 1.268.056 3.71.056s2.755 0 3.71-.056a6.59 6.59 0 0 0 2.186-.419a4.615 4.615 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.187c.043-.962.056-1.267.056-3.71c-.002-2.442-.002-2.752-.058-3.709zm-8.953 8.297c-2.554 0-4.623-2.069-4.623-4.623s2.069-4.623 4.623-4.623a4.623 4.623 0 0 1 0 9.246zm4.807-8.339a1.077 1.077 0 0 1-1.078-1.078a1.077 1.077 0 1 1 2.155 0c0 .596-.482 1.078-1.077 1.078z" fill="currentColor"/><circle cx="11.994" cy="11.979" r="3.003" fill="currentColor"/></svg>                        
+                        </span>
+
+                        <span class="font-bold">
+                            اینستاگرام
+                        </span>
+
+                        <span class="icon-go absolute left-[-100%] duration-300 ease-in-out z-20 text-slate-900 dark:text-slate-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><g fill="currentColor"><path d="m12.332 5.184l4.977 4.424c.93.827 1.396 1.241 1.568 1.73a2 2 0 0 1 0 1.325c-.172.488-.637.902-1.568 1.729l-4.978 4.425c-.422.375-.633.563-.812.57a.5.5 0 0 1-.405-.182C11 19.066 11 18.784 11 18.219v-2.79c-2.428 0-4.993.78-6.865 2.164c-.975.72-1.463 1.08-1.648 1.067a.451.451 0 0 1-.39-.24c-.096-.16-.011-.658.159-1.653C3.361 10.3 7.811 8.57 11 8.57V5.78c0-.565 0-.847.114-.986a.5.5 0 0 1 .405-.181c.18.006.39.194.813.57Z"/><path fill-rule="evenodd" d="M14.989 3.99a.75.75 0 0 1 1.06-.04l5.216 4.844a4.647 4.647 0 0 1-.15 6.944l-5.09 4.333a.75.75 0 1 1-.973-1.142l5.09-4.333a3.147 3.147 0 0 0 .102-4.703L15.028 5.05a.75.75 0 0 1-.04-1.06Z" clip-rule="evenodd"/></g></svg>
+                        </span>
+
+                        <span class="text-go absolute top-[28%] right-[-100%] duration-300 ease-in-out z-20 font-bold text-slate-900 dark:text-slate-200">
+                            برو به اینستاگرام
+                        </span>
+                        
+                        <div class="shadow-go absolute w-full h-full top-0 right-0 opacity-0 duration-300 ease-in-out iShow2 bg-slate-200/50 dark:bg-slate-900/50 backdrop-blur-sm z-10"></div>
+                    </a>
+
+                    <!-- lindedin -->
+                    <a href="https://www.linkedin.com/in/mohammadrezafaramarziii" class="social-media relative flex overflow-hidden items-center justify-between text-slate-700 dark:text-slate-200 duration-100 p-3 rounded-xl">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="24" viewBox="0 0 448 512"><path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2c-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3c94 0 111.28 61.9 111.28 142.3V448z"/></svg>
+                        </span>
+
+                        <span class="font-bold">
+                            لینکدین
+                        </span>
+
+                        <span class="icon-go absolute left-[-100%] duration-300 ease-in-out z-20 text-slate-900 dark:text-slate-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><g fill="currentColor"><path d="m12.332 5.184l4.977 4.424c.93.827 1.396 1.241 1.568 1.73a2 2 0 0 1 0 1.325c-.172.488-.637.902-1.568 1.729l-4.978 4.425c-.422.375-.633.563-.812.57a.5.5 0 0 1-.405-.182C11 19.066 11 18.784 11 18.219v-2.79c-2.428 0-4.993.78-6.865 2.164c-.975.72-1.463 1.08-1.648 1.067a.451.451 0 0 1-.39-.24c-.096-.16-.011-.658.159-1.653C3.361 10.3 7.811 8.57 11 8.57V5.78c0-.565 0-.847.114-.986a.5.5 0 0 1 .405-.181c.18.006.39.194.813.57Z"/><path fill-rule="evenodd" d="M14.989 3.99a.75.75 0 0 1 1.06-.04l5.216 4.844a4.647 4.647 0 0 1-.15 6.944l-5.09 4.333a.75.75 0 1 1-.973-1.142l5.09-4.333a3.147 3.147 0 0 0 .102-4.703L15.028 5.05a.75.75 0 0 1-.04-1.06Z" clip-rule="evenodd"/></g></svg>
+                        </span>
+
+                        <span class="text-go absolute top-[28%] right-[-100%] duration-300 ease-in-out z-20 font-bold text-slate-900 dark:text-slate-200">
+                            برو به لینکدین
+                        </span>
+                        
+                        <div class="shadow-go absolute w-full h-full top-0 right-0 opacity-0 duration-300 ease-in-out iShow2 bg-slate-200/50 dark:bg-slate-900/50 backdrop-blur-sm z-10"></div>
                     </a>
 
                     <!-- github -->
-                    <a href="https://github.com/mohammadrezafaramarziii" target="_blank" title="Github" class="flex items-center justify-center p-1 rounded-full border-2 border-slate-600 text-slate-600 duration-300 hover:bg-red-500 hover:text-white hover:border-red-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd" d="M11.999 1C5.926 1 1 5.925 1 12c0 4.86 3.152 8.983 7.523 10.437c.55.102.75-.238.75-.53c0-.26-.009-.952-.014-1.87c-3.06.664-3.706-1.475-3.706-1.475c-.5-1.27-1.221-1.61-1.221-1.61c-.999-.681.075-.668.075-.668c1.105.078 1.685 1.134 1.685 1.134c.981 1.68 2.575 1.195 3.202.914c.1-.71.384-1.195.698-1.47c-2.442-.278-5.01-1.222-5.01-5.437c0-1.2.428-2.183 1.132-2.952c-.114-.278-.491-1.397.108-2.91c0 0 .923-.297 3.025 1.127A10.536 10.536 0 0 1 12 6.32a10.49 10.49 0 0 1 2.754.37c2.1-1.424 3.022-1.128 3.022-1.128c.6 1.514.223 2.633.11 2.911c.705.769 1.13 1.751 1.13 2.952c0 4.226-2.572 5.156-5.022 5.428c.395.34.747 1.01.747 2.037c0 1.47-.014 2.657-.014 3.017c0 .295.199.637.756.53C19.851 20.979 23 16.859 23 12c0-6.075-4.926-11-11.001-11"/>
-                        </svg>
-                    </a>
+                    <a href="https://github.com/mohammadrezafaramarziii" class="social-media relative flex overflow-hidden items-center justify-between text-slate-700 dark:text-slate-200 duration-100 p-3 rounded-xl">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.247a10 10 0 0 0-3.162 19.487c.5.088.687-.212.687-.475c0-.237-.012-1.025-.012-1.862c-2.513.462-3.163-.613-3.363-1.175a3.636 3.636 0 0 0-1.025-1.413c-.35-.187-.85-.65-.013-.662a2.001 2.001 0 0 1 1.538 1.025a2.137 2.137 0 0 0 2.912.825a2.104 2.104 0 0 1 .638-1.338c-2.225-.25-4.55-1.112-4.55-4.937a3.892 3.892 0 0 1 1.025-2.688a3.594 3.594 0 0 1 .1-2.65s.837-.262 2.75 1.025a9.427 9.427 0 0 1 5 0c1.912-1.3 2.75-1.025 2.75-1.025a3.593 3.593 0 0 1 .1 2.65a3.869 3.869 0 0 1 1.025 2.688c0 3.837-2.338 4.687-4.563 4.937a2.368 2.368 0 0 1 .675 1.85c0 1.338-.012 2.413-.012 2.75c0 .263.187.575.687.475A10.005 10.005 0 0 0 12 2.247Z"/></svg>
+                        </span>
 
-                    <!-- linkedin -->
-                    <a href="https://www.linkedin.com/in/mohammadrezafaramarziii/" target="_blank" title="Linkedin" class="flex items-center justify-center p-1 rounded-full border-2 border-slate-600 text-slate-600 duration-300 hover:bg-red-500 hover:text-white hover:border-red-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd" d="M9.429 8.969h3.714v1.85c.535-1.064 1.907-2.02 3.968-2.02c3.951 0 4.889 2.118 4.889 6.004V22h-4v-6.312c0-2.213-.535-3.461-1.897-3.461c-1.889 0-2.674 1.345-2.674 3.46V22h-4V8.969ZM2.57 21.83h4V8.799h-4V21.83ZM7.143 4.55a2.53 2.53 0 0 1-.753 1.802a2.573 2.573 0 0 1-1.82.748a2.59 2.59 0 0 1-1.818-.747A2.548 2.548 0 0 1 2 4.55c0-.677.27-1.325.753-1.803A2.583 2.583 0 0 1 4.571 2c.682 0 1.336.269 1.819.747c.482.478.753 1.126.753 1.803Z" clip-rule="evenodd"/>
-                        </svg>
-                    </a>
+                        <span class="font-bold">
+                            گیت هاب
+                        </span>
 
+                        <span class="icon-go absolute left-[-100%] duration-300 ease-in-out z-20 text-slate-900 dark:text-slate-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><g fill="currentColor"><path d="m12.332 5.184l4.977 4.424c.93.827 1.396 1.241 1.568 1.73a2 2 0 0 1 0 1.325c-.172.488-.637.902-1.568 1.729l-4.978 4.425c-.422.375-.633.563-.812.57a.5.5 0 0 1-.405-.182C11 19.066 11 18.784 11 18.219v-2.79c-2.428 0-4.993.78-6.865 2.164c-.975.72-1.463 1.08-1.648 1.067a.451.451 0 0 1-.39-.24c-.096-.16-.011-.658.159-1.653C3.361 10.3 7.811 8.57 11 8.57V5.78c0-.565 0-.847.114-.986a.5.5 0 0 1 .405-.181c.18.006.39.194.813.57Z"/><path fill-rule="evenodd" d="M14.989 3.99a.75.75 0 0 1 1.06-.04l5.216 4.844a4.647 4.647 0 0 1-.15 6.944l-5.09 4.333a.75.75 0 1 1-.973-1.142l5.09-4.333a3.147 3.147 0 0 0 .102-4.703L15.028 5.05a.75.75 0 0 1-.04-1.06Z" clip-rule="evenodd"/></g></svg>
+                        </span>
+
+                        <span class="text-go absolute top-[28%] right-[-100%] duration-300 ease-in-out z-20 font-bold text-slate-900 dark:text-slate-200">
+                            برو به گیت هاب
+                        </span>
+                        
+                        <div class="shadow-go absolute w-full h-full top-0 right-0 opacity-0 duration-300 ease-in-out iShow2 bg-slate-200/50 dark:bg-slate-900/50 backdrop-blur-sm z-10"></div>
+                    </a>
+                </div>
+
+                <!-- buttons -->
+                <div class="w-full flex flex-col items-center gap-2">
+                    <div id="profile-btns" class="w-full flex items-center justify-between gap-2">
+                        <a href="#skills" onclick="closeProfileBox()" class="w-full flex items-center justify-center bg-red-500 py-3 rounded-xl text-white duration-100 hover:bg-red-600">
+                            مهارت های من
+                        </a>
+                        <a href="#works" onclick="closeProfileBox()" class="w-full flex items-center justify-center bg-red-500 py-3 rounded-xl text-white duration-100 hover:bg-red-600">
+                            نمونه کار های من
+                        </a>
+                    </div>
+
+                    <div class="w-full">
+                        <button onclick="Download(event)" class="w-full bg-red-500 py-3 rounded-xl text-white duration-100 hover:bg-red-600">
+                            دانلود رزومه من
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ----- profile box end ----- -->
+
+
+
+
+        <!-- ----- content of header start ----- -->
+        <div class="w-full flex flex-col items-center justify-center gap-2 py-20">
+            
+            <!-- my name start -->
+            <div class="w-full flex flex-col items-center justify-center gap-2 md:gap-6 text-slate-900 dark:text-slate-200">
+                <!-- welcome text -->
+                <div class="font-bold text-lg md:text-xl">
+                    <h5 id="hello-text" class="h-[28px]">
+                        
+                    </h5>
+                </div>
+
+                <!-- name -->
+                <div class=" font-bold text-3xl min-[400px]:text-4xl sm:text-[40px] md:text-[45px]">
+                    <h1 id="myname" class="duration-300">
+                        من محمدرضا فرامرزی هستم
+                    </h1>
+                </div>
+
+                <!-- bio -->
+                <div class="font-bold text-3xl min-[400px]:text-4xl sm:text-[40px] md:text-[45px]">
+                    <h2>
+                        توسعه دهنده فرانت اند
+                    </h2>
+                </div>
+            </div>
+            <!-- my name end -->
+
+
+
+            <!-- description start -->
+            <div class="sm:w-[80%] lg:w-[35%] text-slate-600 dark:text-slate-50 leading-10 text-[14px] text-center px-7 sm:px-0">
+                <p>
+                     من توسعه دهنده وب هستم و در حوزه فرانت اند فعالیت می کنم و به کار خودم در این حوزه علاقه دارم. فعالیت خودم در برنامه نویسی رو از سال ۱۳۹۹ به صورت حرفه ای شروع کردم. بزودی نمونه کار های بیشتری از من در گیت هاب و این سایت قرار خواهد گرفت. 
+                </p>
+            </div>
+            <!-- description end -->
+
+
+
+            <!-- buttons start -->
+            <div class="flex items-center justify-center gap-3">
+                <!-- dowload resume button -->
+                <button onclick="Download(event)" class="w-full text-sm md:text-[16px] bg-red-500 border border-red-500 hover:border-red-600 text-white py-3 md:py-4 px-5 md:px-10 whitespace-nowrap rounded-xl hover:bg-red-600 duration-100">
+                    دانلود رزومه
+                </button>
+
+                <!-- read more button -->
+                <a href="#aboutme" id="btn-about-me" class="w-full text-sm md:text-[16px] border border-red-500 dark:border-red-400 py-3 md:py-4 px-5 md:px-10 whitespace-nowrap text-red-500 dark:text-red-400 rounded-xl hover:bg-red-500 dark:hover:border-red-500 hover:text-white dark:hover:text-white duration-100">
+                    بیشتر بدانید
+                </a>
+            </div>
+            <!-- buttons end -->
+        </div>
+        <!-- ----- content of header end ----- -->
+        
+    </header>
+    <!-- *************** header end *************** -->
+
+
+
+
+
+    <!-- *************** about me section start *************** -->
+    <section id="aboutme" class="w-full px-7 py-10 md:px-16 md:py-32 bg-slate-100 dark:bg-slate-800 border-y border-slate-200 dark:border-slate-200/10">
+        <!-- ----- head start ----- -->
+        <div class="flex flex-col gap-5 mb-5">
+            <!-- title -->
+            <div class="flex flex-row-reverse items-center justify-end gap-2 text-slate-900 dark:text-white">
+                <h5 class="text-lg text-red-500 font-bold">
+                    درباره من
+                </h5>
+
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M12 22c-4.714 0-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12s0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22Zm0-4.25a.75.75 0 0 0 .75-.75v-6a.75.75 0 0 0-1.5 0v6c0 .414.336.75.75.75ZM12 7a1 1 0 1 1 0 2a1 1 0 0 1 0-2Z" clip-rule="evenodd"/></svg>
+                </span>
+            </div>
+
+            <!-- description -->
+            <div class="text-slate-900 dark:text-white">
+                <h2 class="font-bold text-3xl md:text-4xl">
+                    با من آشنا شو !
+                </h2>
+            </div>
+        </div>
+        <!-- ----- head end ----- -->
+
+
+
+
+        <!-- ----- body start ----- -->
+        <div class="flex flex-col gap-5">
+            <!-- aboutme text -->
+            <div>
+                <p class="md:w-[70%] text-slate-700 dark:text-slate-300 leading-10 text-justify mb-5">
+                    محمدرضا فرامرزی هستم توسعه دهنده فرانت اند. متولد ۱۳۸۳ ساکن استان البرز هستم و از سال ۱۳۹۹ برنامه نویسی رو به صورت حرفه ای آغاز کردم. به برنامه نویسی و کار تیمی علاقه دارم و نظم و خلاقیت در کار برام اهمیت زیادی داره. همیشه در تلاش برای افزایش تخصص و مهارتم هستم و سعی می کنم تا خودم رو همیشه بروز نگه دارم و با ابزار های جدید و بروز دنیای تکنولوژی آشنا بشم، چون دنیای کامپیوتر دنیای پیشرفت و توسعه هست.
+                </p>
+
+                <button onclick="openProfileBox()" class="bg-red-200 text-red-700 px-5 py-2 rounded-xl duration-300 hover:bg-red-300">
+                    بیشتر بدانید
+                </button>
+            </div>
+
+            <!-- details me -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:flex gap-5">
+                <!-- call -->
+                <div class="flex flex-col lg:items-center gap-2 text-red-500">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M5.733 2.043c1.217-1.21 3.221-.995 4.24.367l1.262 1.684c.83 1.108.756 2.656-.229 3.635l-.238.238a.653.653 0 0 0-.008.306c.063.408.404 1.272 1.832 2.692c1.428 1.42 2.298 1.76 2.712 1.824a.668.668 0 0 0 .315-.009l.408-.406c.876-.87 2.22-1.033 3.304-.444l1.91 1.04c1.637.888 2.05 3.112.71 4.445l-1.421 1.412c-.448.445-1.05.816-1.784.885c-1.81.169-6.027-.047-10.46-4.454c-4.137-4.114-4.931-7.702-5.032-9.47l.749-.042l-.749.042c-.05-.894.372-1.65.91-2.184l1.569-1.561Zm3.04 1.266c-.507-.677-1.451-.731-1.983-.202l-1.57 1.56c-.33.328-.488.69-.468 1.036c.08 1.405.72 4.642 4.592 8.492c4.062 4.038 7.813 4.159 9.263 4.023c.296-.027.59-.181.865-.454l1.42-1.413c.578-.574.451-1.62-.367-2.064l-1.91-1.039c-.528-.286-1.146-.192-1.53.19l-.455.453l-.53-.532c.53.532.529.533.528.533l-.001.002l-.003.003l-.007.006l-.015.014a1.11 1.11 0 0 1-.136.106c-.08.053-.186.112-.319.161c-.27.101-.628.155-1.07.087c-.867-.133-2.016-.724-3.543-2.242c-1.526-1.518-2.122-2.66-2.256-3.526c-.069-.442-.014-.8.088-1.07a1.527 1.527 0 0 1 .238-.42l.032-.035l.014-.015l.006-.006l.003-.003l.002-.002l.53.53l-.53-.531l.288-.285c.428-.427.488-1.134.085-1.673L8.773 3.309Z" clip-rule="evenodd"/></svg>
+                    </span>
+                    <a href="tel:+989365456309" class="text-lg">
+                        ۰۹۳۶۵۴۵۶۳۰۹
+                    </a>
+                </div>
+
+                <!-- email -->
+                <div class="flex flex-col lg:items-center gap-2 text-red-500">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M10.46 1.25h3.08c1.603 0 2.86 0 3.864.095c1.023.098 1.861.3 2.6.752a5.75 5.75 0 0 1 1.899 1.899c.452.738.654 1.577.752 2.6c.095 1.004.095 2.261.095 3.865v1.067c0 1.141 0 2.036-.05 2.759c-.05.735-.153 1.347-.388 1.913a5.75 5.75 0 0 1-3.112 3.112c-.805.334-1.721.408-2.977.43a10.81 10.81 0 0 0-.929.036c-.198.022-.275.054-.32.08c-.047.028-.112.078-.224.232c-.121.166-.258.396-.476.764l-.542.916c-.773 1.307-2.69 1.307-3.464 0l-.542-.916a10.605 10.605 0 0 0-.476-.764c-.112-.154-.177-.204-.224-.232c-.045-.026-.122-.058-.32-.08c-.212-.023-.49-.03-.93-.037c-1.255-.021-2.171-.095-2.976-.429A5.75 5.75 0 0 1 1.688 16.2c-.235-.566-.339-1.178-.389-1.913c-.049-.723-.049-1.618-.049-2.76v-1.066c0-1.604 0-2.86.095-3.865c.098-1.023.3-1.862.752-2.6a5.75 5.75 0 0 1 1.899-1.899c.738-.452 1.577-.654 2.6-.752C7.6 1.25 8.857 1.25 10.461 1.25ZM6.739 2.839c-.914.087-1.495.253-1.959.537A4.25 4.25 0 0 0 3.376 4.78c-.284.464-.45 1.045-.537 1.96c-.088.924-.089 2.11-.089 3.761v1c0 1.175 0 2.019.046 2.685c.045.659.131 1.089.278 1.441a4.25 4.25 0 0 0 2.3 2.3c.515.214 1.173.294 2.429.316h.031c.398.007.747.013 1.037.045c.311.035.616.104.909.274c.29.17.5.395.682.645c.169.232.342.525.538.856l.559.944a.52.52 0 0 0 .882 0l.559-.944c.196-.331.37-.624.538-.856c.182-.25.392-.476.682-.645c.293-.17.598-.24.909-.274c.29-.032.639-.038 1.037-.045h.032c1.255-.022 1.913-.102 2.428-.316a4.25 4.25 0 0 0 2.3-2.3c.147-.352.233-.782.278-1.441c.046-.666.046-1.51.046-2.685v-1c0-1.651 0-2.837-.089-3.762c-.087-.914-.253-1.495-.537-1.959a4.25 4.25 0 0 0-1.403-1.403c-.464-.284-1.045-.45-1.96-.537c-.924-.088-2.11-.089-3.761-.089h-3c-1.651 0-2.837 0-3.762.089ZM7.25 9A.75.75 0 0 1 8 8.25h8a.75.75 0 0 1 0 1.5H8A.75.75 0 0 1 7.25 9Zm0 3.5a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 0 1.5H8a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd"/></svg>                    
+                    </span>
+                    <a href="mailto:mf575583@gmail.com" class="font-en">
+                        mf575583@gmail.com
+                    </a>
+                </div>
+
+                <!-- birthday -->
+                <div class="flex flex-col lg:items-center gap-2 text-red-500">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><g fill="currentColor"><path d="M17 14a1 1 0 1 0 0-2a1 1 0 0 0 0 2Zm0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2Zm-4-5a1 1 0 1 1-2 0a1 1 0 0 1 2 0Zm0 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0Zm-6-3a1 1 0 1 0 0-2a1 1 0 0 0 0 2Zm0 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2Z"/><path fill-rule="evenodd" d="M7 1.75a.75.75 0 0 1 .75.75v.763c.662-.013 1.391-.013 2.193-.013h4.113c.803 0 1.532 0 2.194.013V2.5a.75.75 0 0 1 1.5 0v.827c.26.02.506.045.739.076c1.172.158 2.121.49 2.87 1.238c.748.749 1.08 1.698 1.238 2.87c.153 1.14.153 2.595.153 4.433v2.112c0 1.838 0 3.294-.153 4.433c-.158 1.172-.49 2.121-1.238 2.87c-.749.748-1.698 1.08-2.87 1.238c-1.14.153-2.595.153-4.433.153H9.944c-1.838 0-3.294 0-4.433-.153c-1.172-.158-2.121-.49-2.87-1.238c-.748-.749-1.08-1.698-1.238-2.87c-.153-1.14-.153-2.595-.153-4.433v-2.112c0-1.838 0-3.294.153-4.433c.158-1.172.49-2.121 1.238-2.87c.749-.748 1.698-1.08 2.87-1.238c.233-.031.48-.056.739-.076V2.5A.75.75 0 0 1 7 1.75ZM5.71 4.89c-1.005.135-1.585.389-2.008.812c-.423.423-.677 1.003-.812 2.009c-.023.17-.042.35-.058.539h18.336c-.016-.19-.035-.369-.058-.54c-.135-1.005-.389-1.585-.812-2.008c-.423-.423-1.003-.677-2.009-.812c-1.027-.138-2.382-.14-4.289-.14h-4c-1.907 0-3.261.002-4.29.14ZM2.75 12c0-.854 0-1.597.013-2.25h18.474c.013.653.013 1.396.013 2.25v2c0 1.907-.002 3.262-.14 4.29c-.135 1.005-.389 1.585-.812 2.008c-.423.423-1.003.677-2.009.812c-1.027.138-2.382.14-4.289.14h-4c-1.907 0-3.261-.002-4.29-.14c-1.005-.135-1.585-.389-2.008-.812c-.423-.423-.677-1.003-.812-2.009c-.138-1.027-.14-2.382-.14-4.289v-2Z" clip-rule="evenodd"/></g></svg>                    
+                    </span>
+                    <span class="text-lg">
+                        ۲۸ بهمن ۱۳۸۳
+                    </span>
+                </div>
+
+                <!-- location -->
+                <div class="flex flex-col lg:items-center gap-2 text-red-500">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M3.25 10.143C3.25 5.244 7.155 1.25 12 1.25c4.845 0 8.75 3.994 8.75 8.893c0 2.365-.674 4.905-1.866 7.099c-1.19 2.191-2.928 4.095-5.104 5.112a4.2 4.2 0 0 1-3.56 0c-2.176-1.017-3.914-2.92-5.104-5.112c-1.192-2.194-1.866-4.734-1.866-7.099ZM12 2.75c-3.992 0-7.25 3.297-7.25 7.393c0 2.097.603 4.392 1.684 6.383c1.082 1.993 2.612 3.624 4.42 4.469a2.7 2.7 0 0 0 2.291 0c1.809-.845 3.339-2.476 4.421-4.469c1.081-1.99 1.684-4.286 1.684-6.383c0-4.096-3.258-7.393-7.25-7.393Zm0 5a2.25 2.25 0 1 0 0 4.5a2.25 2.25 0 0 0 0-4.5ZM8.25 10a3.75 3.75 0 1 1 7.5 0a3.75 3.75 0 0 1-7.5 0Z" clip-rule="evenodd"/></svg>
+                    </span>
+                    <span class="text-lg">
+                        البرز، فردیس
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- ----- body end ----- -->
+    </section>
+    <!-- *************** about me section end *************** -->
+
+
+
+
+
+    <!-- *************** people text start *************** -->
+    <section class="w-full p-7">
+        <div class="flex flex-col items-center gap-3">
+            <!-- pic -->
+            <div>
+                <div class="w-20 h-20  bg-[url('../img/steave-jobs.jpeg')] bg-cover rounded-full border border-slate-200 dark:border-slate-200/10"></div>
+            </div>
+
+            <!-- text -->
+            <div class="flex items-center justify-center">
+                <p class="md:w-[60%] leading-7 text-slate-900 dark:text-slate-200 text-center text-sm">
+                    من معتقدم تنها چیزی که باعث شد من به کارم ادامه دهم
+                    این بود که عاشق کاری که انجام می دادم، بودم
+                    شما باید کاری را که دوست دارید، پیدا کنید.
+
+                </p>
+            </div>
+
+            <!-- name -->
+            <div class="text-red-500 font-bold">
+                <span>استیو جابز (بنیان گذار شرکت اپل)</span>
+            </div>
+        </div>
+    </section>
+    <!-- *************** people text end *************** -->
+
+
+
+
+
+    <!-- *************** skills me section start *************** -->
+    <section id="skills" class="w-full px-7 py-10 md:px-16 md:py-32 bg-slate-100 dark:bg-slate-800 border-y border-slate-200 dark:border-slate-200/10">
+        <!-- ----- head start ----- -->
+        <div class="flex flex-col gap-5 mb-10">
+            <!-- title -->
+            <div class="flex flex-row-reverse items-center justify-end gap-2 text-slate-900 dark:text-white">
+                <h5 class="text-lg text-red-500 font-bold">
+                    تخصص های من
+                </h5>
+
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" d="M2 6.21c0-1.984 0-2.977.659-3.593C3.318 2 4.379 2 6.5 2c2.121 0 3.182 0 3.841.617C11 3.233 11 4.226 11 6.21v11.58c0 1.984 0 2.977-.659 3.593C9.682 22 8.621 22 6.5 22c-2.121 0-3.182 0-3.841-.617C2 20.767 2 19.774 2 17.79V6.21Zm11 9.19c0-2.074 0-3.111.659-3.756C14.318 11 15.379 11 17.5 11c2.121 0 3.182 0 3.841.644C22 12.29 22 13.326 22 15.4v2.2c0 2.074 0 3.111-.659 3.756c-.659.644-1.72.644-3.841.644c-2.121 0-3.182 0-3.841-.644C13 20.71 13 19.674 13 17.6v-2.2Zm0-9.9c0-1.087 0-1.63.171-2.06a2.293 2.293 0 0 1 1.218-1.262C14.802 2 15.327 2 16.375 2h2.25c1.048 0 1.573 0 1.986.178c.551.236.99.69 1.218 1.262c.171.43.171.973.171 2.06c0 1.087 0 1.63-.171 2.06a2.293 2.293 0 0 1-1.218 1.262C20.198 9 19.673 9 18.625 9h-2.25c-1.048 0-1.573 0-1.986-.178a2.293 2.293 0 0 1-1.218-1.262C13 7.13 13 6.587 13 5.5Z"/></svg>
+                </span>
+            </div>
+
+            <!-- description -->
+            <div class="text-slate-900 dark:text-white">
+                <h2 class="font-bold text-3xl md:text-4xl">
+                    من همیشه در تلاشم تا توانایی هام رو گسترش بدم
+                </h2>
+            </div>
+        </div>
+        <!-- ----- head end ----- -->
+
+
+
+
+        <!-- ----- body start ----- -->
+        <div class="flex flex-col gap-28">
+
+            <!-- Expertises start -->
+            <div class="flex flex-col gap-10">
+                <!-- title -->
+                <div class="border-b border-red-500">
+                    <h5 class="inline-block bg-red-500 px-4 py-1 text-white rounded-t-lg">
+                        تخصص های من
+                    </h5>
+                </div>
+
+                <!-- expetise -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <!-- item 1 -->
+                    <div class="w-full">
+                        <div class="flex items-center justify-between mb-2 text-slate-800 dark:text-slate-400">
+                            <span class="font-bold font-en text-sm">
+                                HTML5
+                            </span>
+                            <span class="font-bold">
+                                ۹۵٪
+                            </span>
+                        </div>
+                        <div class="h-3 bg-white rounded-full overflow-hidden border border-slate-200 dark:border-slate-200/10">
+                            <div class="w-[95%] h-full bg-red-500 "></div>
+                        </div>
+                    </div>
+                    
+                    <!-- item 2 -->
+                    <div class="w-full">
+                        <div class="flex items-center justify-between mb-2 text-slate-800 dark:text-slate-400">
+                            <span class="font-bold font-en text-sm">
+                                CSS 3
+                            </span>
+                            <span class="font-bold">
+                                ۹۵٪
+                            </span>
+                        </div>
+                        <div class="h-3 bg-white rounded-full overflow-hidden border border-slate-200 dark:border-slate-200/10">
+                            <div class="w-[95%] h-full bg-red-500 "></div>
+                        </div>
+                    </div>
+
+                    <!-- item 3 -->
+                    <div class="w-full">
+                        <div class="flex items-center justify-between mb-2 text-slate-800 dark:text-slate-400">
+                            <span class="font-bold font-en text-sm">
+                                Bootstrap
+                            </span>
+                            <span class="font-bold">
+                                ۹۰٪
+                            </span>
+                        </div>
+                        <div class="h-3 bg-white rounded-full overflow-hidden border border-slate-200 dark:border-slate-200/10">
+                            <div class="w-[90%] h-full bg-red-500 "></div>
+                        </div>
+                    </div>
+
+                    <!-- item 4 -->
+                    <div class="w-full">
+                        <div class="flex items-center justify-between mb-2 text-slate-800 dark:text-slate-400">
+                            <span class="font-bold font-en text-sm">
+                                Tailwind CSS
+                            </span>
+                            <span class="font-bold">
+                                ۹۵٪
+                            </span>
+                        </div>
+                        <div class="h-3 bg-white rounded-full overflow-hidden border border-slate-200 dark:border-slate-200/10">
+                            <div class="w-[95%] h-full bg-red-500 "></div>
+                        </div>
+                    </div>
+
+                    <!-- item 5 -->
+                    <div class="w-full">
+                        <div class="flex items-center justify-between mb-2 text-slate-800 dark:text-slate-400">
+                            <span class="font-bold">
+                                جاوا اسکریپت
+                            </span>
+                            <span class="font-bold">
+                                ۶۵٪
+                            </span>
+                        </div>
+                        <div class="h-3 bg-white rounded-full overflow-hidden border border-slate-200 dark:border-slate-200/10">
+                            <div class="w-[65%] h-full bg-red-500 "></div>
+                        </div>
+                    </div>
+
+                    <!-- item 6 -->
+                    <div class="w-full">
+                        <div class="flex items-center justify-between mb-2 text-slate-800 dark:text-slate-400">
+                            <span class="font-bold">
+                                سی شارپ
+                            </span>
+                            <span class="font-bold">
+                                ۸۰٪
+                            </span>
+                        </div>
+                        <div class="h-3 bg-white rounded-full overflow-hidden border border-slate-200 dark:border-slate-200/10">
+                            <div class="w-[80%] h-full bg-red-500 "></div>
+                        </div>
+                    </div>
+
+                    <!-- item 7 -->
+                    <div class="w-full">
+                        <div class="flex items-center justify-between mb-2 text-slate-800 dark:text-slate-400">
+                            <span class="font-bold font-en text-sm">
+                                Microsoft SQL Server
+                            </span>
+                            <span class="font-bold">
+                                ۷۰٪
+                            </span>
+                        </div>
+                        <div class="h-3 bg-white rounded-full overflow-hidden border border-slate-200 dark:border-slate-200/10">
+                            <div class="w-[70%] h-full bg-red-500 "></div>
+                        </div>
+                    </div>
+
+                    <!-- item 8 -->
+                    <div class="w-full">
+                        <div class="flex items-center justify-between mb-2 text-slate-800 dark:text-slate-400">
+                            <span class="font-bold font-en text-sm">
+                                React Js
+                            </span>
+                            <span class="font-bold">
+                                ۴۰٪
+                            </span>
+                        </div>
+                        <div class="h-3 bg-white rounded-full overflow-hidden border border-slate-200 dark:border-slate-200/10">
+                            <div class="w-[40%] h-full bg-red-500 "></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Expertise end -->
+
+
+            <!-- skills start -->
+            <div class="flex flex-col gap-10">
+                <!-- title -->
+                <div class="border-b border-red-500">
+                    <h5 class="inline-block bg-red-500 px-4 py-1 text-white rounded-t-lg">
+                        مهارت های من
+                    </h5>
+                </div>
+
+                <!-- skill -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <!-- item 1 -->
+                    <div class="w-full">
+                        <div class="flex items-center justify-between mb-2 text-slate-800 dark:text-slate-400">
+                            <span class="font-bold">
+                                گیت
+                            </span>
+                            <span class="font-bold">
+                                ۸۰٪
+                            </span>
+                        </div>
+                        <div class="h-3 bg-white rounded-full overflow-hidden border border-slate-200 dark:border-slate-200/10">
+                            <div class="w-[80%] h-full bg-red-500 "></div>
+                        </div>
+                    </div>
+
+                    <!-- item 2 -->
+                    <div class="w-full">
+                        <div class="flex items-center justify-between mb-2 text-slate-800 dark:text-slate-400">
+                            <span class="font-bold">
+                                گیت هاب
+                            </span>
+                            <span class="font-bold">
+                                ۸۵٪
+                            </span>
+                        </div>
+                        <div class="h-3 bg-white rounded-full overflow-hidden border border-slate-200 dark:border-slate-200/10">
+                            <div class="w-[85%] h-full bg-red-500 "></div>
+                        </div>
+                    </div>
+
+                    <!-- item 3 -->
+                    <div class="w-full">
+                        <div class="flex items-center justify-between mb-2 text-slate-800 dark:text-slate-400">
+                            <span class="font-bold font-en text-sm">
+                                Visual Studio Code
+                            </span>
+                            <span class="font-bold">
+                                ۹۰٪
+                            </span>
+                        </div>
+                        <div class="h-3 bg-white rounded-full overflow-hidden border border-slate-200 dark:border-slate-200/10">
+                            <div class="w-[90%] h-full bg-red-500 "></div>
+                        </div>
+                    </div>
+
+                    <!-- item 4 -->
+                    <div class="w-full">
+                        <div class="flex items-center justify-between mb-2 text-slate-800 dark:text-slate-400">
+                            <span class="font-bold font-en text-sm">
+                                Visual Studio
+                            </span>
+                            <span class="font-bold">
+                                ۸۵٪
+                            </span>
+                        </div>
+                        <div class="h-3 bg-white rounded-full overflow-hidden border border-slate-200 dark:border-slate-200/10">
+                            <div class="w-[85%] h-full bg-red-500 "></div>
+                        </div>
+                    </div>
+
+                    <!-- item 5 -->
+                    <div class="w-full">
+                        <div class="flex items-center justify-between mb-2 text-slate-800 dark:text-slate-400">
+                            <span class="font-bold font-en text-sm">
+                                Adobe Illustrator
+                            </span>
+                            <span class="font-bold">
+                                ۸۰٪
+                            </span>
+                        </div>
+                        <div class="h-3 bg-white rounded-full overflow-hidden border border-slate-200 dark:border-slate-200/10">
+                            <div class="w-[80%] h-full bg-red-500 "></div>
+                        </div>
+                    </div>
+
+                    <!-- item 6 -->
+                    <div class="w-full">
+                        <div class="flex items-center justify-between mb-2 text-slate-800 dark:text-slate-400">
+                            <span class="font-bold font-en text-sm">
+                                Adobe Photoshop
+                            </span>
+                            <span class="font-bold">
+                                ۵۰٪
+                            </span>
+                        </div>
+                        <div class="h-3 bg-white rounded-full overflow-hidden border border-slate-200 dark:border-slate-200/10">
+                            <div class="w-[50%] h-full bg-red-500 "></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- skills end -->
+        </div>
+        <!-- ----- body end ----- -->
+    </section>
+    <!-- *************** skills me section end *************** -->
+
+
+
+
+    <!-- *************** people text start *************** -->
+    <section class="w-full p-7">
+        <div class="flex flex-col items-center gap-3">
+            <!-- pic -->
+            <div>
+                <div class="w-20 h-20  bg-[url('../img/mark-toin.jpg')] bg-cover rounded-full border border-slate-200 dark:border-slate-200/10"></div>
+            </div>
+
+            <!-- text -->
+            <div class="flex items-center justify-center">
+                <p class="md:w-[60%] leading-7 text-slate-900 dark:text-slate-200 text-center text-sm">
+                    شجاعت، مقابله با ترس و سلطه بر آن است نه فقدانِ ترس.
+                </p>
+            </div>
+
+            <!-- name -->
+            <div class="text-red-500 font-bold">
+                <span>مارک تواین (نویسنده)</span>
+            </div>
+        </div>
+    </section>
+    <!-- *************** people text end *************** -->
+    
+
+
+
+
+    <!-- *************** educational and work data section start *************** -->
+    <section id="work-data" class="w-full px-7 py-10 md:px-16 md:py-32 bg-slate-100 dark:bg-slate-800 border-y border-slate-200 dark:border-slate-200/10">
+        <!-- ----- head start ----- -->
+        <div class="flex flex-col gap-5 mb-5">
+            <!-- title -->
+            <div class="flex flex-row-reverse items-center justify-end gap-2 text-slate-900 dark:text-white">
+                <h5 class="text-lg text-red-500 font-bold">
+                    سوابق من
+                </h5>
+
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M4.172 3.172C3 4.343 3 6.229 3 10v4c0 3.771 0 5.657 1.172 6.828C5.343 22 7.229 22 11 22h2c3.771 0 5.657 0 6.828-1.172C21 19.657 21 17.771 21 14v-4c0-3.771 0-5.657-1.172-6.828C18.657 2 16.771 2 13 2h-2C7.229 2 5.343 2 4.172 3.172ZM7.25 8A.75.75 0 0 1 8 7.25h8a.75.75 0 0 1 0 1.5H8A.75.75 0 0 1 7.25 8Zm0 4a.75.75 0 0 1 .75-.75h8a.75.75 0 0 1 0 1.5H8a.75.75 0 0 1-.75-.75ZM8 15.25a.75.75 0 0 0 0 1.5h5a.75.75 0 0 0 0-1.5H8Z" clip-rule="evenodd"/></svg>
+                </span>
+            </div>
+
+            <!-- description -->
+            <div class="text-slate-900 dark:text-white">
+                <h2 class="font-bold text-3xl md:text-4xl">
+                    رزومه تحصیلی و شغلی من 
+                </h2>
+            </div>
+        </div>
+        <!-- ----- head end ----- -->
+
+
+
+
+        <!-- ----- body start ----- -->
+        <div class="flex flex-col md:flex-row gap-5">
+            <!-- educational data -->
+            <div class="w-full flex flex-col gap-5">
+                <div class="flex items-center">
+                    <h5 class="bg-red-500 rounded-full text-white text-2xl font-bold py-1 px-4">تحصیلات</h5>
+                </div>
+
+                <div class="px-3">
+
+                    <!-- item 1 -->
+                    <div class="work-data-box flex flex-col gap-2 relative border-r border-slate-200 dark:border-red-200/10 pb-6 pr-5">
+                        <h6 class="text-slate-700 dark:text-slate-200 font-bold text-xl">
+                            دیپلم شبکه و نرم افزار
+                        </h6>
+
+                        <p class="text-slate-500 dark:text-slate-400">
+                            هنرستان باقرالعلوم
+                        </p>
+
+                        <span class="text-slate-500 dark:text-slate-400 text-sm">
+                            ۱۳۹۹-۱۴۰۲
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- work data -->
+            <div class="w-full flex flex-col gap-5">
+                <div class="flex items-center">
+                    <h5 class="bg-red-500 rounded-full text-white text-2xl font-bold py-1 px-4">
+                        تجربیات
+                    </h5>
+                </div>
+
+                <div class="px-3">
+                    <!-- item 1 -->
+                    <div class="work-data-box flex flex-col gap-2 relative border-r border-slate-200 dark:border-red-200/10 pb-6 pr-5">
+                        <h6 class="text-slate-700 dark:text-slate-200 font-bold text-xl">
+                            طراح گرافیک و لوگو
+                        </h6>
+
+                        <p class="text-slate-500 dark:text-slate-400">
+                            شرکت محتواسل
+                        </p>
+
+                        <span class="text-slate-500 dark:text-slate-400 text-sm">
+                            ۱۳۹۹-۱۴۰۱ (۲ سال) 
+                        </span>
+                    </div>
+
+                    <!-- item 2 -->
+                    <div class="work-data-box flex flex-col gap-2 relative border-r border-slate-200 dark:border-red-200/10 pb-6 pr-5">
+                        <h6 class="text-slate-700 dark:text-slate-200 font-bold text-xl">
+                            توسعه دهنده فرانت اند
+                        </h6>
+
+                        <p class="text-slate-500 dark:text-slate-400">
+                            طراحی سایت هواشناسی کهگیلویه و بویر احمد
+                        </p>
+
+                        <a href="https://www.kbmet.ir" target="_blank" class="text-slate-500 dark:text-slate-400 text-sm">
+                            لینک سایت 
+                        </a>
+                    </div>
+
+                    <!-- item 3 -->
+                    <div class="work-data-box flex flex-col gap-2 relative border-r border-slate-200 dark:border-red-200/10 pb-6 pr-5">
+                        <h6 class="text-slate-700 dark:text-slate-200 font-bold text-xl">
+                            برنامه نویس فرانت اند
+                        </h6>
+
+                        <p class="text-slate-500 dark:text-slate-400">
+                            شرکت تفتاکو
+                        </p>
+
+                        <span class="text-slate-500 dark:text-slate-400 text-sm">
+                            ۱۴۰۱-تا به حالا 
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ----- body end ----- -->
+    </section>
+    <!-- *************** educational and work data section end *************** -->
+
+
+
+
+
+    <!-- *************** people text start *************** -->
+    <section class="w-full p-7">
+        <div class="flex flex-col items-center gap-3">
+            <!-- pic -->
+            <div>
+                <div class="w-20 h-20  bg-[url('../img/gabe-logan-newell.jpg')] bg-cover rounded-full border border-slate-200 dark:border-slate-200/10"></div>
+            </div>
+
+            <!-- text -->
+            <div class="flex items-center justify-center">
+                <p class="md:w-[60%] leading-7 text-slate-900 dark:text-slate-200 text-center text-sm">
+                    در آینده برنامه‌نویسان نقش جادوگران رو بازی خواهند کرد چرا که قدرتی جادویی دارن که دیگر افراد جامعه فاقد اون هستن.
+                </p>
+            </div>
+
+            <!-- name -->
+            <div class="text-red-500 font-bold">
+                <span>گیب لوگان نیوئل (طراح بازی ویدیوئی)</span>
+            </div>
+        </div>
+    </section>
+    <!-- *************** people text end *************** -->
+    
+
+
+
+
+    <!-- *************** works me section start *************** -->
+    <section id="works" class="w-full px-7 py-10 md:px-16 md:py-32 bg-slate-100 dark:bg-slate-800 border-y border-slate-200 dark:border-slate-200/10">
+        <!-- ----- head start ----- -->
+        <div class="flex flex-col gap-5 mb-10">
+            <!-- title -->
+            <div class="flex flex-row-reverse items-center justify-end gap-2 text-slate-900 dark:text-white">
+                <h5 class="text-lg text-red-500 font-bold">
+                    نمونه کار ها
+                </h5>
+
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" d="M5.5 16V8a3 3 0 0 0-3-3a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 .5.5a3 3 0 0 0 3-3Zm7-11c1.886 0 2.828 0 3.414.586c.586.586.586 1.528.586 3.414v6c0 1.886 0 2.828-.586 3.414C15.328 19 14.386 19 12.5 19h-1c-1.886 0-2.828 0-3.414-.586C7.5 17.828 7.5 16.886 7.5 15V9c0-1.886 0-2.828.586-3.414C8.672 5 9.614 5 11.5 5h1Zm6 3v8a3 3 0 0 0 3 3a.5.5 0 0 0 .5-.5v-13a.5.5 0 0 0-.5-.5a3 3 0 0 0-3 3Z"/></svg>
+                </span>
+            </div>
+
+            <!-- description -->
+            <div class="text-slate-900 dark:text-white">
+                <h2 class="font-bold text-3xl md:text-4xl">
+                    پروژه هایی که تونستم انجام بدم
+                </h2>
+            </div>
+        </div>
+        <!-- ----- head end ----- -->
+
+
+
+
+        <!-- ----- body start ----- -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+            <!-- item 1 -->
+            <div class="work-item-box flex flex-col gap-3 p-7 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-200/10 rounded-2xl">
+                <div class="aspect-[7/5] bg-slate-100 rounded-lg overflow-hidden">
+                    <img src="./assets/img/w-1.svg" alt="" class="w-full h-full">
+                </div>
+
+                <div class="flex flex-col gap-1 pr-2">
+                    <h4 class="work-text font-bold text-slate-800 dark:text-slate-200 cursor-pointer whitespace-nowrap overflow-hidden text-ellipsis">
+                        <a href="https://mohammadrezafaramarziii.github.io/TehranWeb-MRF/" target="_blank" class="flex items-center gap-2">
+                            قالب گردشگری تهران
+
+                            <svg class="hidden icon-go" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M5.25 6A.75.75 0 0 1 6 5.25h9a.75.75 0 0 1 0 1.5H7.81l10.72 10.72a.75.75 0 1 1-1.06 1.06L6.75 7.81V15a.75.75 0 0 1-1.5 0V6Z" clip-rule="evenodd"/></svg>    
+                        </a>
+                    </h4>
+
+                    <p class="text-sm text-slate-800 dark:text-slate-200">
+                        این قالب با HTML, CSS ساخته شده
+                    </p>
+                </div>
+            </div>
+
+            <!-- item 2 -->
+            <div class="work-item-box flex flex-col gap-3 p-7 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-200/10 rounded-2xl">
+                <div class="aspect-[7/5] bg-slate-100 rounded-lg overflow-hidden">
+                    <img src="./assets/img/w-2.svg" alt="" class="w-full h-full">
+                </div>
+
+                <div class="flex flex-col gap-1 pr-2">
+                    <h4 class="work-text font-bold text-slate-800 dark:text-slate-200 cursor-pointer">
+                        <a href="https://mohammadrezafaramarziii.github.io/MyPanelAdmin-MRF/" target="_blank" class="flex items-center gap-2 whitespace-nowrap overflow-hidden text-ellipsis">
+                            قالب پنل ادمین
+
+                            <svg class="hidden icon-go" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M5.25 6A.75.75 0 0 1 6 5.25h9a.75.75 0 0 1 0 1.5H7.81l10.72 10.72a.75.75 0 1 1-1.06 1.06L6.75 7.81V15a.75.75 0 0 1-1.5 0V6Z" clip-rule="evenodd"/></svg>    
+                        </a>
+                    </h4>
+
+                    <p class="text-sm text-slate-800 dark:text-slate-200">
+                        این قالب با تیلویند ساخته شده
+                    </p>
+                </div>
+            </div>
+
+            <!-- item 3 -->
+            <div class="work-item-box flex flex-col gap-3 p-7 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-200/10 rounded-2xl">
+                <div class="aspect-[7/5] bg-slate-100 rounded-lg overflow-hidden">
+                    <img src="./assets/img/w-3.svg" alt="" class="w-full h-full">
+                </div>
+
+                <div class="flex flex-col gap-1 pr-2">
+                    <h4 class="work-text font-bold text-slate-800 dark:text-slate-200 cursor-pointer">
+                        <a href="https://kbmet.ir" target="_blank" class="flex items-center gap-2">
+                            سایت هواشناسی کهگیلویه و بویر احمد
+
+                            <svg class="hidden icon-go" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M5.25 6A.75.75 0 0 1 6 5.25h9a.75.75 0 0 1 0 1.5H7.81l10.72 10.72a.75.75 0 1 1-1.06 1.06L6.75 7.81V15a.75.75 0 0 1-1.5 0V6Z" clip-rule="evenodd"/></svg>    
+                        </a>
+                    </h4>
+
+                    <p class="text-sm text-slate-800 dark:text-slate-200">
+                        فرانت اند این سایت با تیلویند ساخته شده
+                    </p>
+                </div>
+            </div>
+
+            <!-- item 4 -->
+            <div class="work-item-box flex flex-col gap-3 p-7 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-200/10 rounded-2xl">
+                <div class="aspect-[7/5] bg-slate-100 rounded-lg overflow-hidden">
+                    <img src="./assets/img/w-4.svg" alt="" class="w-full h-full">
+                </div>
+
+                <div class="flex flex-col gap-1 pr-2">
+                    <h4 class="work-text font-bold text-slate-800 dark:text-slate-200 cursor-pointer">
+                        <a href="https://mohammadrezafaramarziii.github.io/WebGallery/" target="_blank" class="flex items-center gap-2">
+                            قالب گالری تصویر
+
+                            <svg class="hidden icon-go" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M5.25 6A.75.75 0 0 1 6 5.25h9a.75.75 0 0 1 0 1.5H7.81l10.72 10.72a.75.75 0 1 1-1.06 1.06L6.75 7.81V15a.75.75 0 0 1-1.5 0V6Z" clip-rule="evenodd"/></svg>    
+                        </a>
+                    </h4>
+
+                    <p class="text-sm text-slate-800 dark:text-slate-200">
+                        توضیحات
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <!-- ----- body end ----- -->
+    </section>
+    <!-- *************** works me section end *************** -->
+
+
+
+
+
+    <!-- *************** people text start *************** -->
+    <section class="w-full p-7">
+        <div class="flex flex-col items-center gap-3">
+            <!-- pic -->
+            <div>
+                <div class="w-20 h-20  bg-[url('../img/rabin-sharma.jpeg')] bg-cover rounded-full border border-slate-200 dark:border-slate-200/10"></div>
+            </div>
+
+            <!-- text -->
+            <div class="flex items-center justify-center">
+                <p class="md:w-[60%] leading-7 text-slate-900 dark:text-slate-200 text-center text-sm">
+                    پیشرفت روزانه کوچک، در طولانی مدت منجر به نتایج خیره‌ کننده خواهد شد.
+                </p>
+            </div>
+
+            <!-- name -->
+            <div class="text-red-500 font-bold">
+                <span>رابین شارما (نوسنده و سخنران)</span>
+            </div>
+        </div>
+    </section>
+    <!-- *************** people text end *************** -->
+    
+
+
+
+
+    <!-- *************** works me section start *************** -->
+    <section id="callme" class="w-full px-7 py-10 md:px-16 md:py-32 bg-slate-100 dark:bg-slate-800 border-y border-slate-200 dark:border-slate-200/10">
+        <!-- ----- head start ----- -->
+        <div class="flex flex-col gap-5 mb-10">
+            <!-- title -->
+            <div class="flex flex-row-reverse items-center justify-end gap-2 text-slate-900 dark:text-white">
+                <h5 class="text-lg text-red-500 font-bold">
+                    همکاری با من
+                </h5>
+
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M22 12c0 5.523-4.477 10-10 10c-1.6 0-3.112-.376-4.452-1.044a1.634 1.634 0 0 0-1.149-.133l-2.226.596a1.3 1.3 0 0 1-1.591-1.592l.595-2.226a1.633 1.633 0 0 0-.134-1.148A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10ZM12 7.25a.75.75 0 0 1 .75.75v8a.75.75 0 0 1-1.5 0V8a.75.75 0 0 1 .75-.75ZM8.75 10a.75.75 0 0 0-1.5 0v4a.75.75 0 0 0 1.5 0v-4ZM16 9.25a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0v-4a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd"/></svg>
+                </span>
+            </div>
+
+            <!-- description -->
+            <div class="text-slate-900 dark:text-white">
+                <h2 class="font-bold text-3xl md:text-4xl">
+                     با من در تماس باش
+                </h2>
+            </div>
+        </div>
+        <!-- ----- head end ----- -->
+
+
+
+
+        <!-- ----- body start ----- -->
+        <div class="flex flex-col items-center justify-center gap-7 md:gap-10 md:flex-row">
+            <div class="flex flex-col items-center justify-center md:!justify-start gap-4 md:border-l md:border-slate-200 md:dark:border-slate-200/10 md:pl-10">
+                <div>
+                    <h5 class="text-slate-700 dark:text-slate-400 font-bold text-xl md:text-2xl">
+                        راه های ارتباطی
+                    </h5>
+                </div>
+
+                <div class="flex items-center justify-center gap-2 md:gap-4">
                     <!-- email -->
-                    <a href="mailto:mf575583@gmail.com" target="_blank" title="Email" class="flex items-center justify-center p-1 rounded-full border-2 border-slate-600 text-slate-600 duration-300 hover:bg-red-500 hover:text-white hover:border-red-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24">
-                            <path fill="currentColor" d="M12 22q-2.05 0-3.875-.788q-1.825-.787-3.187-2.15q-1.363-1.362-2.15-3.187Q2 14.05 2 12q0-2.075.788-3.887q.787-1.813 2.15-3.175Q6.3 3.575 8.125 2.787Q9.95 2 12 2q2.075 0 3.887.787q1.813.788 3.175 2.151q1.363 1.362 2.15 3.175Q22 9.925 22 12v1.45q0 1.475-1.012 2.512Q19.975 17 18.5 17q-.9 0-1.675-.4t-1.275-1.05q-.675.675-1.587 1.063Q13.05 17 12 17q-2.075 0-3.537-1.463Q7 14.075 7 12t1.463-3.538Q9.925 7 12 7t3.538 1.462Q17 9.925 17 12v1.45q0 .725.45 1.137q.45.413 1.05.413q.6 0 1.05-.413q.45-.412.45-1.137V12q0-3.275-2.363-5.638Q15.275 4 12 4Q8.725 4 6.362 6.362Q4 8.725 4 12t2.362 5.637Q8.725 20 12 20h5v2Zm0-7q1.25 0 2.125-.875T15 12q0-1.25-.875-2.125T12 9q-1.25 0-2.125.875T9 12q0 1.25.875 2.125T12 15Z"/>
-                        </svg>
+                    <a href="mailto:mf575583@gmail.com" target="_blank" title="ایمیل" class="flex items-center justify-center bg-white dark:bg-slate-900 text-red-500 hover:bg-red-500 hover:text-white dark:hover:bg-red-500 dark:hover:text-slate-900 duration-100 rounded-xl p-2 md:p-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="currentColor" d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64L12 9.548l6.545-4.91l1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
                     </a>
 
                     <!-- call -->
-                    <button title="09365456309" class="flex items-center justify-center p-1 rounded-full border-2 border-slate-600 text-slate-600 duration-300 hover:bg-red-500 hover:text-white hover:border-red-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 512 512">
-                            <path fill="currentColor" d="M391 480c-19.52 0-46.94-7.06-88-30c-49.93-28-88.55-53.85-138.21-103.38C116.91 298.77 93.61 267.79 61 208.45c-36.84-67-30.56-102.12-23.54-117.13C45.82 73.38 58.16 62.65 74.11 52a176.3 176.3 0 0 1 28.64-15.2c1-.43 1.93-.84 2.76-1.21c4.95-2.23 12.45-5.6 21.95-2c6.34 2.38 12 7.25 20.86 16c18.17 17.92 43 57.83 52.16 77.43c6.15 13.21 10.22 21.93 10.23 31.71c0 11.45-5.76 20.28-12.75 29.81c-1.31 1.79-2.61 3.5-3.87 5.16c-7.61 10-9.28 12.89-8.18 18.05c2.23 10.37 18.86 41.24 46.19 68.51s57.31 42.85 67.72 45.07c5.38 1.15 8.33-.59 18.65-8.47c1.48-1.13 3-2.3 4.59-3.47c10.66-7.93 19.08-13.54 30.26-13.54h.06c9.73 0 18.06 4.22 31.86 11.18c18 9.08 59.11 33.59 77.14 51.78c8.77 8.84 13.66 14.48 16.05 20.81c3.6 9.53.21 17-2 22c-.37.83-.78 1.74-1.21 2.75a176.49 176.49 0 0 1-15.29 28.58c-10.63 15.9-21.4 28.21-39.38 36.58A67.42 67.42 0 0 1 391 480Z"/>
-                        </svg>
-                    </button>
-
-                </div>
-
-            </div>
-            <!-- ----- profile end ----- -->
-
-
-            <!-- ----- about me start ----- -->
-            <div class="flex flex-col md:w-full items-center justify-center justify-self-start gap-2 md:px-10">
-
-                <!-- my name -->
-                <h1 class="font-bold text-3xl text-slate-800">
-                    من محمدرضا فرامرزی هستم
-                </h1>
-
-                <!-- biography -->
-                <p class="leading-8 text-justify text-slate-600 text-[15px]">
-                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد
-                </p>
-
-                <!-- download resume and call me buttons -->
-                <div class="flex items-center self-start justify-center gap-2">
-                    <button class="px-5 py-2 bg-slate-200 text-slate-800 text-sm rounded-lg duration-300 hover:bg-red-500 hover:text-white">
-                        دانلود رزومه
-                    </button>
-                    <a href="#callData" data-target="callData" id="btn-callData" class="px-5 py-2 bg-slate-200 text-slate-800 text-sm rounded-lg duration-300 hover:bg-red-500 hover:text-white">
-                        راه های ارتباطی
+                    <a href="tel:+989365456309" target="_blank" title="تماس" class="flex items-center justify-center bg-white dark:bg-slate-900 text-red-500 hover:bg-red-500 hover:text-white dark:hover:bg-red-500 dark:hover:text-slate-900 duration-100 rounded-xl p-2 md:p-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="currentColor" d="m10.038 5.316l.649 1.163c.585 1.05.35 2.426-.572 3.349c0 0-1.12 1.119.91 3.148c2.027 2.027 3.146.91 3.147.91c.923-.923 2.3-1.158 3.349-.573l1.163.65c1.585.884 1.772 3.106.379 4.5c-.837.836-1.863 1.488-2.996 1.53c-1.908.073-5.149-.41-8.4-3.66c-3.25-3.251-3.733-6.492-3.66-8.4c.043-1.133.694-2.159 1.53-2.996c1.394-1.393 3.616-1.206 4.5.38Z"/></svg>
                     </a>
                 </div>
             </div>
-            <!-- ----- about me end ----- -->
 
-        </section>
-        <!-- ---------- profile end ---------- -->
-
-
-
-
-
-        <!-- --------- about me start --------- -->
-        <section id="aboutme" class="md:w-[85%] md:mx-auto flex flex-col items-center justify-between">
-            
-            <!-- ----- head start ----- -->
-            <div class="w-full text-center">
-                <h4 class="section-title inline text-slate-800 text-3xl font-semibold relative">درباره من</h4>
-            </div>
-            <!-- ----- head end ----- -->
-
-
-            <!-- ----- body start ----- -->
-            <div class="w-full flex flex-col md:flex-row-reverse items-center justify-center">
-
-                <!-- programmer gif -->
-                <div class="md:w-1/2 flex items-center justify-center">
-                    <img src="./assets/img/programmer-pic.gif" alt="programming gif">
-                </div>
-
-                <!-- my details -->
-                <div class="w-full md:w-1/2 px-3 flex flex-col items-start justify-center gap-3">
-                    <li class="w-full text-lg list-none flex items-center justify-between">
-                        <span class="text-slate-900 font-semibold">نام:</span>
-                        <span class="text-slate-700">محمدرضا فرامرزی</span>
-                    </li>
-                    <li class="w-full text-lg list-none flex items-center justify-between">
-                        <span class="text-slate-900 font-semibold">تاریخ تولد:</span>
-                        <span class="text-slate-700">28 بهمن 1383</span>
-                    </li>
-                    <li class="w-full text-lg list-none flex items-center justify-between">
-                        <span class="text-slate-900 font-semibold">محل زندگی:</span>
-                        <span class="text-slate-700">البرز، فردیس</span>
-                    </li>
-                    <li class="w-full text-lg list-none flex items-center justify-between">
-                        <span class="text-slate-900 font-semibold">شماره تماس:</span>
-                        <span class="text-slate-700">09365456309</span>
-                    </li>
-                    <li class="w-full text-lg list-none flex items-center justify-between">
-                        <span class="text-slate-900 font-semibold">ایمیل:</span>
-                        <a href="mailto:mf575583@gmail.com" class="text-slate-700 font-en text-[16px]">mf575583@gmail.com</a>
-                    </li>
-                </div>
-            </div>
-            <!-- ----- body end ----- -->
-
-        </section>
-        <!-- --------- about me end --------- -->
-
-
-
-
-
-        <!-- ---------- my skills start ---------- -->
-        <section id="skill" class="md:w-[85%] md:mx-auto md:rounded-2xl bg-white shadow-custome p-3 md:p-5">
-            <!-- head -->
-            <div class="w-full flex items-center justify-between px-5 py-4">
-                <h4 class="text-3xl text-slate-800 font-semibold">
-                    تخصص های من
-                </h4>
-            </div>
-
-            <!-- body -->
-            <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 p-5 gap-5">
-
-                <!-- skill 1 -->
-                <div class="p-2">
-                    <div class="flex items-center justify-between text-slate-800 font-semibold text-sm mb-1">
-                        <span class="font-en">HTML 5</span>
-                        <span class="font-en">95%</span>
-                    </div>
-                    <div class="h-3 bg-slate-200 rounded-full">
-                        <span class="w-[95%] h-full block bg-red-500 rounded-full"></span>
-                    </div>
-                </div>
-
-                <!-- skill 2 -->
-                <div class="p-2">
-                    <div class="flex items-center justify-between text-slate-800 font-semibold text-sm mb-1">
-                        <span class="font-en">CSS 3</span>
-                        <span class="font-en">95%</span>
-                    </div>
-                    <div class="h-3 bg-slate-200 rounded-full">
-                        <span class="w-[95%] h-full block bg-red-500 rounded-full"></span>
-                    </div>
-                </div>
-
-                <!-- skill 3 -->
-                <div class="p-2">
-                    <div class="flex items-center justify-between text-slate-800 font-semibold text-sm mb-1">
-                        <span class="font-en">Bootstrap</span>
-                        <span class="font-en">90%</span>
-                    </div>
-                    <div class="h-3 bg-slate-200 rounded-full">
-                        <span class="w-[90%] h-full block bg-red-500 rounded-full"></span>
-                    </div>
-                </div>
-
-                <!-- skill 4 -->
-                <div class="p-2">
-                    <div class="flex items-center justify-between text-slate-800 font-semibold text-sm mb-1">
-                        <span class="font-en">Tailwind CSS</span>
-                        <span class="font-en">95%</span>
-                    </div>
-                    <div class="h-3 bg-slate-200 rounded-full">
-                        <span class="w-[95%] h-full block bg-red-500 rounded-full"></span>
-                    </div>
-                </div>
-
-                <!-- skill 5 -->
-                <div class="p-2">
-                    <div class="flex items-center justify-between text-slate-800 font-semibold text-sm mb-1">
-                        <span>جاوا اسکریپت</span>
-                        <span class="font-en">45%</span>
-                    </div>
-                    <div class="h-3 bg-slate-200 rounded-full">
-                        <span class="w-[45%] h-full block bg-red-500 rounded-full"></span>
-                    </div>
-                </div>
-
-                <!-- skill 6 -->
-                <div class="p-2">
-                    <div class="flex items-center justify-between text-slate-800 font-semibold text-sm mb-1">
-                        <span>سی شارپ</span>
-                        <span class="font-en">55%</span>
-                    </div>
-                    <div class="h-3 bg-slate-200 rounded-full">
-                        <span class="w-[55%] h-full block bg-red-500 rounded-full"></span>
-                    </div>
-                </div>
-
-                <!-- skill 7 -->
-                <div class="p-2">
-                    <div class="flex items-center justify-between text-slate-800 font-semibold text-sm mb-1">
-                        <span class="font-en">Microsoft SQL Server</span>
-                        <span class="font-en">50%</span>
-                    </div>
-                    <div class="h-3 bg-slate-200 rounded-full">
-                        <span class="w-[50%] h-full block bg-red-500 rounded-full"></span>
-                    </div>
-                </div>
-
-                <!-- skill 8 -->
-                <div class="p-2">
-                    <div class="flex items-center justify-between text-slate-800 font-semibold text-sm mb-1">
-                        <span class="font-en">React js</span>
-                        <span class="font-en">15%</span>
-                    </div>
-                    <div class="h-3 bg-slate-200 rounded-full">
-                        <span class="w-[15%] h-full block bg-red-500 rounded-full"></span>
-                    </div>
-                </div>
-
-            </div>
-            
-        </section>
-        <!-- ---------- my skills end ---------- -->
-
-
-
-
-
-        <!-- ---------- tools start ---------- -->
-        <section id="tools" class="md:w-[85%] md:mx-auto md:rounded-2xl bg-white shadow-custome p-3 md:p-5">
-            <!-- head -->
-            <div class="w-full flex items-center justify-between px-5 py-4">
-                <h4 class="text-3xl text-slate-800 font-semibold">
-                    مهارت ها
-                </h4>
-            </div>
-
-            <!-- body -->
-            <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 p-5 gap-5">
-
-                <!-- tool 1 -->
-                <div class="p-2">
-                    <div class="flex items-center justify-between text-slate-800 font-semibold text-sm mb-1">
-                        <span class="font-en">Git</span>
-                        <span class="font-en">80%</span>
-                    </div>
-                    <div class="h-3 bg-slate-200 rounded-full">
-                        <span class="w-[80%] h-full block bg-red-500 rounded-full"></span>
-                    </div>
-                </div>
-
-                <!-- tool 2 -->
-                <div class="p-2">
-                    <div class="flex items-center justify-between text-slate-800 font-semibold text-sm mb-1">
-                        <span class="font-en">GitHub</span>
-                        <span class="font-en">80%</span>
-                    </div>
-                    <div class="h-3 bg-slate-200 rounded-full">
-                        <span class="w-[80%] h-full block bg-red-500 rounded-full"></span>
-                    </div>
-                </div>
-
-                <!-- Tool 3 -->
-                <div class="p-2">
-                    <div class="flex items-center justify-between text-slate-800 font-semibold text-sm mb-1">
-                        <span class="font-en">Visual Studio Code</span>
-                        <span class="font-en">95%</span>
-                    </div>
-                    <div class="h-3 bg-slate-200 rounded-full">
-                        <span class="w-[95%] h-full block bg-red-500 rounded-full"></span>
-                    </div>
-                </div>
-
-                <!-- Tool 4 -->
-                <div class="p-2">
-                    <div class="flex items-center justify-between text-slate-800 font-semibold text-sm mb-1">
-                        <span class="font-en">Visual Studio</span>
-                        <span class="font-en">80%</span>
-                    </div>
-                    <div class="h-3 bg-slate-200 rounded-full">
-                        <span class="w-[80%] h-full block bg-red-500 rounded-full"></span>
-                    </div>
-                </div>
-
-                <!-- Tool 5 -->
-                <div class="p-2">
-                    <div class="flex items-center justify-between text-slate-800 font-semibold text-sm mb-1">
-                        <span class="font-en">Adobe PhotoShop</span>
-                        <span class="font-en">65%</span>
-                    </div>
-                    <div class="h-3 bg-slate-200 rounded-full">
-                        <span class="w-[65%] h-full block bg-red-500 rounded-full"></span>
-                    </div>
-                </div>
-
-                <!-- tool 6 -->
-                <div class="p-2">
-                    <div class="flex items-center justify-between text-slate-800 font-semibold text-sm mb-1">
-                        <span class="font-en">Adobe Illustrator</span>
-                        <span class="font-en">75%</span>
-                    </div>
-                    <div class="h-3 bg-slate-200 rounded-full">
-                        <span class="w-[75%] h-full block bg-red-500 rounded-full"></span>
-                    </div>
-                </div>
-
-            </div>
-            
-        </section>
-        <!-- ---------- tools end ---------- -->
-
-
-
-
-
-        <!-- ---------- my example works start ---------- -->
-        <section id="workExample" class="md:w-[85%] md:mx-auto md:rounded-2xl bg-white shadow-custome p-3 md:p-5">
-            <!-- head -->
-            <div class="w-full flex items-center justify-between px-5 py-4">
-                <h4 class="text-3xl text-slate-800 font-semibold">
-                    نمونه کار ها
-                </h4>
-
+            <div class="flex flex-col items-center justify-center gap-4">
                 <div>
-                    <button id="btn-prev-slide-work" class="rounded-full bg-slate-200 text-slate-700 duration-300 hover:bg-red-500 hover:text-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
-                            <path fill="currentColor" d="M11.7 15.3q-.475.475-1.087.212Q10 15.25 10 14.575v-5.15q0-.675.613-.937q.612-.263 1.087.212l2.6 2.6q.15.15.225.325q.075.175.075.375t-.075.375q-.075.175-.225.325Z"/>
-                        </svg>
-                    </button>
-                    <button id="btn-next-slide-work" class="rounded-full bg-slate-200 text-slate-700 duration-300 hover:bg-red-500 hover:text-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
-                            <path fill="currentColor" d="m12.3 15.3l-2.6-2.6q-.15-.15-.225-.325Q9.4 12.2 9.4 12t.075-.375q.075-.175.225-.325l2.6-2.6q.475-.475 1.087-.212q.613.262.613.937v5.15q0 .675-.613.937q-.612.263-1.087-.212Z"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-
-            <!-- body -->
-            <div class="w-full">
-
-                <div id="example-work-slider" class="owl-carousel owl-theme">
-                    <!-- work 1 -->
-                    <div class="exam-work item aspect-video bg-slate-200 rounded-lg overflow-hidden relative">
-                        <div class="exam-work-hover absolute opacity-0 flex flex-col items-center justify-between top-0 right-0 w-full h-full bg-slate-500/30 backdrop-blur py-10 duration-300 ease-in-out">
-                            <span class="text-white text-3xl">سایت تهران</span>
-                            <a 
-                                href="https://mohammadrezafaramarziii.github.io/TehranWeb-MRF/" 
-                                target="_blank" 
-                                class="px-5 py-2 bg-slate-200 text-slate-800 text-sm rounded-lg duration-300 hover:bg-red-500 hover:text-white"
-                            >
-                                مشاهده
-                            </a>
-                        </div>
-                        <a href="https://mohammadrezafaramarziii.github.io/TehranWeb-MRF/">
-                            <img src="./assets/img/exampleWork-1.png" alt="picture example work 1">
-                        </a>
-                    </div>
-
-                    <!-- work 2 -->
-                    <div class="exam-work item aspect-video bg-slate-200 rounded-lg overflow-hidden relative">
-                        <div class="exam-work-hover absolute opacity-0 flex flex-col items-center justify-between top-0 right-0 w-full h-full bg-slate-500/30 backdrop-blur py-10 duration-300 ease-in-out">
-                            <span class="text-white text-3xl">پنل ادمین</span>
-                            <a 
-                                href="https://mohammadrezafaramarziii.github.io/MyPanelAdmin-MRF/" 
-                                target="_blank" 
-                                class="px-5 py-2 bg-slate-200 text-slate-800 text-sm rounded-lg duration-300 hover:bg-red-500 hover:text-white"
-                            >
-                                مشاهده
-                            </a>
-                        </div>
-                        <a href="https://mohammadrezafaramarziii.github.io/MyPanelAdmin-MRF/">
-                            <img src="./assets/img/exampleWork-2.png" alt="picture example work 2">
-                        </a>
-                    </div>
+                    <h5 class="text-slate-700 dark:text-slate-400 font-bold text-xl md:text-2xl">
+                        شبکه های اجتماعی
+                    </h5>
                 </div>
 
+                <div class="flex items-center justify-center gap-2 md:gap-4">
+                    <!-- telegram -->
+                    <a href="https://t.me/mohammadrezafaramarziii" target="_blank" title="تلگرام" class="flex items-center justify-center bg-white dark:bg-slate-900 text-red-500 hover:bg-red-500 hover:text-white dark:hover:bg-red-500 dark:hover:text-slate-900 duration-100 rounded-xl p-2 md:p-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"/><path fill="currentColor" d="M19.777 4.43a1.5 1.5 0 0 1 2.062 1.626l-2.268 13.757c-.22 1.327-1.676 2.088-2.893 1.427c-1.018-.553-2.53-1.405-3.89-2.294c-.68-.445-2.763-1.87-2.507-2.884c.22-.867 3.72-4.125 5.72-6.062c.785-.761.427-1.2-.5-.5c-2.303 1.738-5.998 4.381-7.22 5.125c-1.078.656-1.64.768-2.312.656c-1.226-.204-2.363-.52-3.291-.905c-1.254-.52-1.193-2.244-.001-2.746l17.1-7.2Z"/></g></svg>
+                    </a>
+
+                    <!-- instagram -->
+                    <a href="https://instagram.com/mohammadrezafaramarziii" target="_blank" title="اینستاگرام" class="flex items-center justify-center bg-white dark:bg-slate-900 text-red-500 hover:bg-red-500 hover:text-white dark:hover:bg-red-500 dark:hover:text-slate-900 duration-100 rounded-xl p-2 md:p-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><g id="feInstagram0" fill="none" fill-rule="evenodd" stroke="none" stroke-width="1"><g id="feInstagram1" fill="currentColor"><path id="feInstagram2" d="M12 2c-2.716 0-3.056.012-4.123.06c-1.064.049-1.791.218-2.427.465a4.901 4.901 0 0 0-1.772 1.153A4.902 4.902 0 0 0 2.525 5.45c-.247.636-.416 1.363-.465 2.427C2.011 8.944 2 9.284 2 12s.011 3.056.06 4.123c.049 1.064.218 1.791.465 2.427a4.903 4.903 0 0 0 1.153 1.772a4.903 4.903 0 0 0 1.772 1.153c.636.247 1.363.416 2.427.465c1.067.048 1.407.06 4.123.06s3.056-.012 4.123-.06c1.064-.049 1.791-.218 2.427-.465a4.902 4.902 0 0 0 1.772-1.153a4.902 4.902 0 0 0 1.153-1.772c.247-.636.416-1.363.465-2.427c.048-1.067.06-1.407.06-4.123s-.012-3.056-.06-4.123c-.049-1.064-.218-1.791-.465-2.427a4.902 4.902 0 0 0-1.153-1.772a4.901 4.901 0 0 0-1.772-1.153c-.636-.247-1.363-.416-2.427-.465C15.056 2.012 14.716 2 12 2m0 1.802c2.67 0 2.986.01 4.04.058c.976.045 1.505.207 1.858.344c.466.182.8.399 1.15.748c.35.35.566.684.748 1.15c.136.353.3.882.344 1.857c.048 1.055.058 1.37.058 4.041c0 2.67-.01 2.986-.058 4.04c-.045.976-.208 1.505-.344 1.858a3.1 3.1 0 0 1-.748 1.15c-.35.35-.684.566-1.15.748c-.353.136-.882.3-1.857.344c-1.054.048-1.37.058-4.041.058c-2.67 0-2.987-.01-4.04-.058c-.976-.045-1.505-.208-1.858-.344a3.098 3.098 0 0 1-1.15-.748a3.098 3.098 0 0 1-.748-1.15c-.137-.353-.3-.882-.344-1.857c-.048-1.055-.058-1.37-.058-4.041c0-2.67.01-2.986.058-4.04c.045-.976.207-1.505.344-1.858c.182-.466.399-.8.748-1.15c.35-.35.684-.566 1.15-.748c.353-.137.882-.3 1.857-.344c1.055-.048 1.37-.058 4.041-.058m0 11.531a3.333 3.333 0 1 1 0-6.666a3.333 3.333 0 0 1 0 6.666m0-8.468a5.135 5.135 0 1 0 0 10.27a5.135 5.135 0 0 0 0-10.27m6.538-.203a1.2 1.2 0 1 1-2.4 0a1.2 1.2 0 0 1 2.4 0"/></g></g></svg>
+                    </a>
+
+                    <!-- linkedin -->
+                    <a href="https://www.linkedin.com/in/mohammadrezafaramarziii" target="_blank" title="لینکدین" class="flex items-center justify-center bg-white dark:bg-slate-900 text-red-500 hover:bg-red-500 hover:text-white dark:hover:bg-red-500 dark:hover:text-slate-900 duration-100 rounded-xl p-2 md:p-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M9.429 8.969h3.714v1.85c.535-1.064 1.907-2.02 3.968-2.02c3.951 0 4.889 2.118 4.889 6.004V22h-4v-6.312c0-2.213-.535-3.461-1.897-3.461c-1.889 0-2.674 1.345-2.674 3.46V22h-4V8.969ZM2.57 21.83h4V8.799h-4V21.83ZM7.143 4.55a2.53 2.53 0 0 1-.753 1.802a2.573 2.573 0 0 1-1.82.748a2.59 2.59 0 0 1-1.818-.747A2.548 2.548 0 0 1 2 4.55c0-.677.27-1.325.753-1.803A2.583 2.583 0 0 1 4.571 2c.682 0 1.336.269 1.819.747c.482.478.753 1.126.753 1.803Z" clip-rule="evenodd"/></svg>
+                    </a>
+
+                    <!-- github -->
+                    <a href="https://github.com/mohammadrezafaramarziii" target="_blank" title="گیت هاب" class="flex items-center justify-center bg-white dark:bg-slate-900 text-red-500 hover:bg-red-500 hover:text-white dark:hover:bg-red-500 dark:hover:text-slate-900 duration-100 rounded-xl p-2 md:p-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33c.85 0 1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+                    </a>
+
+                </div>
             </div>
-            
-        </section>
-        <!-- ---------- my example works end ---------- -->
+        </div>
+        <!-- ----- body end ----- -->
+    </section>
+    <!-- *************** works me section end *************** -->
 
 
 
 
-        <!-- --------- call data start --------- -->
-        <section id="callData" class="md:w-[85%] md:mx-auto md:rounded-2xl bg-white shadow-custome p-3 md:p-5">
-            <!-- head -->
-            <div class="w-full flex items-center justify-between px-5 py-4 mb-5">
-                <h4 class="text-3xl text-slate-800 font-semibold">
-                    راه های ارتباط با من
-                </h4>
+
+    <!-- *************** footer start *************** -->
+    <footer class="w-full px-10 t-10">
+        <!-- social media -->
+        <div class="flex flex-col items-center justify-center gap-5 py-10 bordr-t border-slate-200 dark:border-slate-200/10">
+            <div>
+                <img id="logo-footer" src="./assets/img/logo-light.svg" alt="logo" class="w-16">
             </div>
 
-            <!-- body -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 px-5">
+            <div>
+                <p class="text-slate-700 text-sm dark:text-slate-400">ساخته شده توسط محمدرضا فرامرزی</p>
+            </div>
 
+            <div class="flex items-center gap-1">
                 <!-- telegram -->
-                <a 
-                    href="https://t.me/mohammadrezafaramarziii" 
-                    class="w-full flex items-center justify-between py-2 border-[1px] hover:bg-slate-200 duration-300 ease-in-out rounded-lg px-3"
-                    target="_blank"
-                >
-                    <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                        class="w-7"
-                        viewBox="0 0 48 48">
-                        <linearGradient id="BiF7D16UlC0RZ_VqXJHnXa_oWiuH0jFiU0R_gr1" x1="9.858" x2="38.142" y1="9.858" y2="38.142" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#33bef0"></stop><stop offset="1" stop-color="#0a85d9"></stop></linearGradient><path fill="url(#BiF7D16UlC0RZ_VqXJHnXa_oWiuH0jFiU0R_gr1)" d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"></path><path d="M10.119,23.466c8.155-3.695,17.733-7.704,19.208-8.284c3.252-1.279,4.67,0.028,4.448,2.113	c-0.273,2.555-1.567,9.99-2.363,15.317c-0.466,3.117-2.154,4.072-4.059,2.863c-1.445-0.917-6.413-4.17-7.72-5.282	c-0.891-0.758-1.512-1.608-0.88-2.474c0.185-0.253,0.658-0.763,0.921-1.017c1.319-1.278,1.141-1.553-0.454-0.412	c-0.19,0.136-1.292,0.935-1.745,1.237c-1.11,0.74-2.131,0.78-3.862,0.192c-1.416-0.481-2.776-0.852-3.634-1.223	C8.794,25.983,8.34,24.272,10.119,23.466z" opacity=".05"></path><path d="M10.836,23.591c7.572-3.385,16.884-7.264,18.246-7.813c3.264-1.318,4.465-0.536,4.114,2.011	c-0.326,2.358-1.483,9.654-2.294,14.545c-0.478,2.879-1.874,3.513-3.692,2.337c-1.139-0.734-5.723-3.754-6.835-4.633	c-0.86-0.679-1.751-1.463-0.71-2.598c0.348-0.379,2.27-2.234,3.707-3.614c0.833-0.801,0.536-1.196-0.469-0.508	c-1.843,1.263-4.858,3.262-5.396,3.625c-1.025,0.69-1.988,0.856-3.664,0.329c-1.321-0.416-2.597-0.819-3.262-1.078	C9.095,25.618,9.075,24.378,10.836,23.591z" opacity=".07"></path><path fill="#fff" d="M11.553,23.717c6.99-3.075,16.035-6.824,17.284-7.343c3.275-1.358,4.28-1.098,3.779,1.91	c-0.36,2.162-1.398,9.319-2.226,13.774c-0.491,2.642-1.593,2.955-3.325,1.812c-0.833-0.55-5.038-3.331-5.951-3.984	c-0.833-0.595-1.982-1.311-0.541-2.721c0.513-0.502,3.874-3.712,6.493-6.21c0.343-0.328-0.088-0.867-0.484-0.604	c-3.53,2.341-8.424,5.59-9.047,6.013c-0.941,0.639-1.845,0.932-3.467,0.466c-1.226-0.352-2.423-0.772-2.889-0.932	C9.384,25.282,9.81,24.484,11.553,23.717z"></path>
-                        </svg>
-                    </span>
-                    <span>تلگرام</span>
-                </a>
-
-                <!-- linkedin -->
-                <a 
-                    href="https://www.linkedin.com/in/mohammadrezafaramarziii/" 
-                    class="w-full flex items-center justify-between py-2 border-[1px] hover:bg-slate-200 duration-300 ease-in-out rounded-lg px-3"
-                    target="_blank"
-                >
-                    <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                        class="w-7"
-                        viewBox="0 0 48 48">
-                        <path fill="#0078d4" d="M24,4C12.954,4,4,12.954,4,24s8.954,20,20,20s20-8.954,20-20S35.046,4,24,4z"></path><path d="M30,35v-9c0-1.103-0.897-2-2-2s-2,0.897-2,2v9h-6V18h6v1.027C27.04,18.359,28.252,18,29.5,18	c3.584,0,6.5,2.916,6.5,6.5V35H30z M13,35V18h2.966C14.247,18,13,16.738,13,14.999C13,13.261,14.267,12,16.011,12	c1.696,0,2.953,1.252,2.989,2.979C19,16.733,17.733,18,15.988,18H19v17H13z" opacity=".05"></path><path d="M30.5,34.5V26c0-1.378-1.121-2.5-2.5-2.5s-2.5,1.122-2.5,2.5v8.5h-5v-16h5v1.534	c1.09-0.977,2.512-1.534,4-1.534c3.309,0,6,2.691,6,6v10H30.5z M13.5,34.5v-16h5v16H13.5z M15.966,17.5	c-1.429,0-2.466-1.052-2.466-2.501c0-1.448,1.056-2.499,2.511-2.499c1.436,0,2.459,1.023,2.489,2.489	c0,1.459-1.057,2.511-2.512,2.511H15.966z" opacity=".07"></path><path fill="#fff" d="M14,19h4v15h-4V19z M15.988,17h-0.022C14.772,17,14,16.11,14,14.999C14,13.864,14.796,13,16.011,13	c1.217,0,1.966,0.864,1.989,1.999C18,16.11,17.228,17,15.988,17z M35,24.5c0-3.038-2.462-5.5-5.5-5.5	c-1.862,0-3.505,0.928-4.5,2.344V19h-4v15h4v-8c0-1.657,1.343-3,3-3s3,1.343,3,3v8h4C35,34,35,24.921,35,24.5z"></path>
-                        </svg>
-                    </span>
-                    <span>لینکدین</span>
-                </a>
-
-                <!-- github -->
-                <a 
-                    href="https://github.com/mohammadrezafaramarziii" 
-                    class="w-full flex items-center justify-between py-2 border-[1px] hover:bg-slate-200 duration-300 ease-in-out rounded-lg px-3"
-                    target="_blank"
-                >
-                    <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                        class="w-7"
-                        viewBox="0 0 48 48">
-                        <linearGradient id="rL2wppHyxHVbobwndsT6Ca_AZOZNnY73haj_gr1" x1="4" x2="44" y1="23.508" y2="23.508" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4c4c4c"></stop><stop offset="1" stop-color="#343434"></stop></linearGradient><path fill="url(#rL2wppHyxHVbobwndsT6Ca_AZOZNnY73haj_gr1)" d="M24,4C12.954,4,4,12.954,4,24c0,8.887,5.801,16.411,13.82,19.016h12.36	C38.199,40.411,44,32.887,44,24C44,12.954,35.046,4,24,4z"></path><path d="M30.01,41.996L30,36.198c0-0.939-0.22-1.856-0.642-2.687c5.641-1.133,8.386-4.468,8.386-10.177	c0-2.255-0.665-4.246-1.976-5.92c0.1-0.317,0.174-0.645,0.22-0.981c0.188-1.369-0.023-2.264-0.193-2.984l-0.027-0.116	c-0.186-0.796-0.409-1.364-0.418-1.388l-0.111-0.282l-0.111-0.282l-0.302-0.032l-0.303-0.032c0,0-0.199-0.021-0.501-0.021	c-0.419,0-1.04,0.042-1.627,0.241l-0.196,0.066c-0.74,0.249-1.439,0.485-2.417,1.069c-0.286,0.171-0.599,0.366-0.934,0.584	C27.334,12.881,25.705,12.69,24,12.69c-1.722,0-3.365,0.192-4.889,0.571c-0.339-0.22-0.654-0.417-0.942-0.589	c-0.978-0.584-1.677-0.819-2.417-1.069l-0.196-0.066c-0.585-0.199-1.207-0.241-1.626-0.241c-0.302,0-0.501,0.021-0.501,0.021	l-0.302,0.032l-0.3,0.031l-0.112,0.281l-0.113,0.283c-0.01,0.026-0.233,0.594-0.419,1.391l-0.027,0.115	c-0.17,0.719-0.381,1.615-0.193,2.983c0.048,0.346,0.125,0.685,0.23,1.011c-1.285,1.666-1.936,3.646-1.936,5.89	c0,5.695,2.748,9.028,8.397,10.17c-0.194,0.388-0.345,0.798-0.452,1.224c-0.197,0.067-0.378,0.112-0.538,0.137	c-0.238,0.036-0.487,0.054-0.739,0.054c-0.686,0-1.225-0.134-1.435-0.259c-0.313-0.186-0.872-0.727-1.414-1.518	c-0.463-0.675-1.185-1.558-1.992-1.927c-0.698-0.319-1.437-0.502-2.029-0.502c-0.138,0-0.265,0.01-0.376,0.028	c-0.517,0.082-0.949,0.366-1.184,0.78c-0.203,0.357-0.235,0.773-0.088,1.141c0.219,0.548,0.851,0.985,1.343,1.255	c0.242,0.133,0.765,0.619,1.07,1.109c0.229,0.368,0.335,0.63,0.482,0.992c0.087,0.215,0.183,0.449,0.313,0.732	c0.47,1.022,1.937,1.924,2.103,2.023c0.806,0.483,2.161,0.638,3.157,0.683l0.123,0.003c0,0,0.001,0,0.001,0	c0.24,0,0.57-0.023,1.004-0.071v2.613c0.002,0.529-0.537,0.649-1.25,0.638l0.547,0.184C19.395,43.572,21.645,44,24,44	c2.355,0,4.605-0.428,6.703-1.176l0.703-0.262C30.695,42.538,30.016,42.422,30.01,41.996z" opacity=".05"></path><path d="M30.781,42.797c-0.406,0.047-1.281-0.109-1.281-0.795v-5.804c0-1.094-0.328-2.151-0.936-3.052	c5.915-0.957,8.679-4.093,8.679-9.812c0-2.237-0.686-4.194-2.039-5.822c0.137-0.365,0.233-0.75,0.288-1.147	c0.175-1.276-0.016-2.086-0.184-2.801l-0.027-0.116c-0.178-0.761-0.388-1.297-0.397-1.319l-0.111-0.282l-0.303-0.032	c0,0-0.178-0.019-0.449-0.019c-0.381,0-0.944,0.037-1.466,0.215l-0.196,0.066c-0.714,0.241-1.389,0.468-2.321,1.024	c-0.332,0.198-0.702,0.431-1.101,0.694C27.404,13.394,25.745,13.19,24,13.19c-1.762,0-3.435,0.205-4.979,0.61	c-0.403-0.265-0.775-0.499-1.109-0.699c-0.932-0.556-1.607-0.784-2.321-1.024l-0.196-0.066c-0.521-0.177-1.085-0.215-1.466-0.215	c-0.271,0-0.449,0.019-0.449,0.019l-0.302,0.032l-0.113,0.283c-0.009,0.022-0.219,0.558-0.397,1.319l-0.027,0.116	c-0.169,0.715-0.36,1.524-0.184,2.8c0.056,0.407,0.156,0.801,0.298,1.174c-1.327,1.62-1.999,3.567-1.999,5.795	c0,5.703,2.766,8.838,8.686,9.806c-0.395,0.59-0.671,1.255-0.813,1.964c-0.33,0.13-0.629,0.216-0.891,0.256	c-0.263,0.04-0.537,0.06-0.814,0.06c-0.69,0-1.353-0.129-1.69-0.329c-0.44-0.261-1.057-0.914-1.572-1.665	c-0.35-0.51-1.047-1.417-1.788-1.755c-0.635-0.29-1.298-0.457-1.821-0.457c-0.11,0-0.21,0.008-0.298,0.022	c-0.366,0.058-0.668,0.252-0.828,0.534c-0.128,0.224-0.149,0.483-0.059,0.708c0.179,0.448,0.842,0.85,1.119,1.002	c0.335,0.184,0.919,0.744,1.254,1.284c0.251,0.404,0.37,0.697,0.521,1.067c0.085,0.209,0.178,0.437,0.304,0.712	c0.331,0.719,1.353,1.472,1.905,1.803c0.754,0.452,2.154,0.578,2.922,0.612l0.111,0.002c0.299,0,0.8-0.045,1.495-0.135v3.177	c0,0.779-0.991,0.81-1.234,0.81c-0.031,0,0.503,0.184,0.503,0.184C19.731,43.64,21.822,44,24,44c2.178,0,4.269-0.36,6.231-1.003	C30.231,42.997,30.812,42.793,30.781,42.797z" opacity=".07"></path><path fill="#fff" d="M36.744,23.334c0-2.31-0.782-4.226-2.117-5.728c0.145-0.325,0.296-0.761,0.371-1.309	c0.172-1.25-0.031-2-0.203-2.734s-0.375-1.25-0.375-1.25s-0.922-0.094-1.703,0.172s-1.453,0.469-2.422,1.047	c-0.453,0.27-0.909,0.566-1.27,0.806C27.482,13.91,25.785,13.69,24,13.69c-1.801,0-3.513,0.221-5.067,0.652	c-0.362-0.241-0.821-0.539-1.277-0.811c-0.969-0.578-1.641-0.781-2.422-1.047s-1.703-0.172-1.703-0.172s-0.203,0.516-0.375,1.25	s-0.375,1.484-0.203,2.734c0.077,0.562,0.233,1.006,0.382,1.333c-1.31,1.493-2.078,3.397-2.078,5.704	c0,5.983,3.232,8.714,9.121,9.435c-0.687,0.726-1.148,1.656-1.303,2.691c-0.387,0.17-0.833,0.33-1.262,0.394	c-1.104,0.167-2.271,0-2.833-0.333s-1.229-1.083-1.729-1.813c-0.422-0.616-1.031-1.331-1.583-1.583	c-0.729-0.333-1.438-0.458-1.833-0.396c-0.396,0.063-0.583,0.354-0.5,0.563c0.083,0.208,0.479,0.521,0.896,0.75	c0.417,0.229,1.063,0.854,1.438,1.458c0.418,0.674,0.5,1.063,0.854,1.833c0.249,0.542,1.101,1.219,1.708,1.583	c0.521,0.313,1.562,0.491,2.688,0.542c0.389,0.018,1.308-0.096,2.083-0.206v3.75c0,0.639-0.585,1.125-1.191,1.013	C19.756,43.668,21.833,44,24,44c2.166,0,4.243-0.332,6.19-0.984C29.585,43.127,29,42.641,29,42.002v-5.804	c0-1.329-0.527-2.53-1.373-3.425C33.473,32.071,36.744,29.405,36.744,23.334z M11.239,32.727c-0.154-0.079-0.237-0.225-0.185-0.328	c0.052-0.103,0.22-0.122,0.374-0.043c0.154,0.079,0.237,0.225,0.185,0.328S11.393,32.806,11.239,32.727z M12.451,33.482	c-0.081,0.088-0.255,0.06-0.389-0.062s-0.177-0.293-0.096-0.381c0.081-0.088,0.255-0.06,0.389,0.062S12.532,33.394,12.451,33.482z M13.205,34.732c-0.102,0.072-0.275,0.005-0.386-0.15s-0.118-0.34-0.016-0.412s0.275-0.005,0.386,0.15	C13.299,34.475,13.307,34.66,13.205,34.732z M14.288,35.673c-0.069,0.112-0.265,0.117-0.437,0.012s-0.256-0.281-0.187-0.393	c0.069-0.112,0.265-0.117,0.437-0.012S14.357,35.561,14.288,35.673z M15.312,36.594c-0.213-0.026-0.371-0.159-0.353-0.297	c0.017-0.138,0.204-0.228,0.416-0.202c0.213,0.026,0.371,0.159,0.353,0.297C15.711,36.529,15.525,36.62,15.312,36.594z M16.963,36.833c-0.227-0.013-0.404-0.143-0.395-0.289c0.009-0.146,0.2-0.255,0.427-0.242c0.227,0.013,0.404,0.143,0.395,0.289	C17.381,36.738,17.19,36.846,16.963,36.833z M18.521,36.677c-0.242,0-0.438-0.126-0.438-0.281s0.196-0.281,0.438-0.281	c0.242,0,0.438,0.126,0.438,0.281S18.762,36.677,18.521,36.677z"></path>
-                        </svg>
-                    </span>
-                    <span>گیت هاب</span>
+                <a href="https://t.me/mohammadrezafaramarziii" class="flex items-center justify-center bg-red-500 hover:bg-red-600 dark:text-slate-900 duration-100 text-white rounded-full p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"/><path fill="currentColor" d="M19.777 4.43a1.5 1.5 0 0 1 2.062 1.626l-2.268 13.757c-.22 1.327-1.676 2.088-2.893 1.427c-1.018-.553-2.53-1.405-3.89-2.294c-.68-.445-2.763-1.87-2.507-2.884c.22-.867 3.72-4.125 5.72-6.062c.785-.761.427-1.2-.5-.5c-2.303 1.738-5.998 4.381-7.22 5.125c-1.078.656-1.64.768-2.312.656c-1.226-.204-2.363-.52-3.291-.905c-1.254-.52-1.193-2.244-.001-2.746l17.1-7.2Z"/></g></svg>
                 </a>
 
                 <!-- instagram -->
-                <a 
-                    href="https://instagram.com/mohammadrezafaramarziii" 
-                    class="w-full flex items-center justify-between py-2 border-[1px] hover:bg-slate-200 duration-300 ease-in-out rounded-lg px-3"
-                    target="_blank"
-                >
-                    <span>
-                        <img 
-                            src="./assets/img/instagram_icon.png" 
-                            class="w-8"
-                        >
-                    </span>
-                    <span>اینستاگرام</span>
+                <a href="https://instagram.com/mohammadrezafaramarziii" class="flex items-center justify-center bg-red-500 hover:bg-red-600 dark:text-slate-900 duration-100 text-white rounded-full p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M20.947 8.305a6.53 6.53 0 0 0-.419-2.216a4.61 4.61 0 0 0-2.633-2.633a6.606 6.606 0 0 0-2.186-.42c-.962-.043-1.267-.055-3.709-.055s-2.755 0-3.71.055a6.606 6.606 0 0 0-2.185.42a4.607 4.607 0 0 0-2.633 2.633a6.554 6.554 0 0 0-.419 2.185c-.043.963-.056 1.268-.056 3.71s0 2.754.056 3.71c.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632a6.584 6.584 0 0 0 2.185.45c.963.043 1.268.056 3.71.056s2.755 0 3.71-.056a6.59 6.59 0 0 0 2.186-.419a4.615 4.615 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.187c.043-.962.056-1.267.056-3.71c-.002-2.442-.002-2.752-.058-3.709zm-8.953 8.297c-2.554 0-4.623-2.069-4.623-4.623s2.069-4.623 4.623-4.623a4.623 4.623 0 0 1 0 9.246zm4.807-8.339a1.077 1.077 0 0 1-1.078-1.078a1.077 1.077 0 1 1 2.155 0c0 .596-.482 1.078-1.077 1.078z" fill="currentColor"/><circle cx="11.994" cy="11.979" r="3.003" fill="currentColor"/></svg>                        
                 </a>
 
-                <!-- email -->
-                <a 
-                    href="mailto:mf575583@gmail.com" 
-                    class="w-full flex items-center justify-between py-2 border-[1px] hover:bg-slate-200 duration-300 ease-in-out rounded-lg px-3"
-                    target="_blank"
-                >
-                    <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                        class="w-7"
-                        viewBox="0 0 48 48">
-                        <linearGradient id="6769YB8EDCGhMGPdL9zwWa_ho8QlOYvMuG3_gr1" x1="15.072" x2="24.111" y1="13.624" y2="24.129" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e3e3e3"></stop><stop offset="1" stop-color="#e2e2e2"></stop></linearGradient><path fill="url(#6769YB8EDCGhMGPdL9zwWa_ho8QlOYvMuG3_gr1)" d="M42.485,40H5.515C4.126,40,3,38.874,3,37.485V10.515C3,9.126,4.126,8,5.515,8h36.969	C43.874,8,45,9.126,45,10.515v26.969C45,38.874,43.874,40,42.485,40z"></path><linearGradient id="6769YB8EDCGhMGPdL9zwWb_ho8QlOYvMuG3_gr2" x1="26.453" x2="36.17" y1="25.441" y2="37.643" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f5f5f5"></stop><stop offset=".03" stop-color="#eee"></stop><stop offset="1" stop-color="#eee"></stop></linearGradient><path fill="url(#6769YB8EDCGhMGPdL9zwWb_ho8QlOYvMuG3_gr2)" d="M42.485,40H8l37-29v26.485C45,38.874,43.874,40,42.485,40z"></path><linearGradient id="6769YB8EDCGhMGPdL9zwWc_ho8QlOYvMuG3_gr3" x1="3" x2="45" y1="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d74a39"></stop><stop offset="1" stop-color="#c73d28"></stop></linearGradient><path fill="url(#6769YB8EDCGhMGPdL9zwWc_ho8QlOYvMuG3_gr3)" d="M5.515,8H8v32H5.515C4.126,40,3,38.874,3,37.485V10.515C3,9.126,4.126,8,5.515,8z M42.485,8	H40v32h2.485C43.874,40,45,38.874,45,37.485V10.515C45,9.126,43.874,8,42.485,8z"></path><linearGradient id="6769YB8EDCGhMGPdL9zwWd_ho8QlOYvMuG3_gr4" x1="24" x2="24" y1="8" y2="38.181" gradientUnits="userSpaceOnUse"><stop offset="0" stop-opacity=".15"></stop><stop offset="1" stop-opacity=".03"></stop></linearGradient><path fill="url(#6769YB8EDCGhMGPdL9zwWd_ho8QlOYvMuG3_gr4)" d="M42.485,40H30.515L3,11.485v-0.969C3,9.126,4.126,8,5.515,8h36.969	C43.874,8,45,9.126,45,10.515v26.969C45,38.874,43.874,40,42.485,40z"></path><linearGradient id="6769YB8EDCGhMGPdL9zwWe_ho8QlOYvMuG3_gr5" x1="3" x2="45" y1="17.73" y2="17.73" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f5f5f5"></stop><stop offset="1" stop-color="#f5f5f5"></stop></linearGradient><path fill="url(#6769YB8EDCGhMGPdL9zwWe_ho8QlOYvMuG3_gr5)" d="M43.822,13.101L24,27.459L4.178,13.101C3.438,12.565,3,11.707,3,10.793v-0.278	C3,9.126,4.126,8,5.515,8h36.969C43.874,8,45,9.126,45,10.515v0.278C45,11.707,44.562,12.565,43.822,13.101z"></path><linearGradient id="6769YB8EDCGhMGPdL9zwWf_ho8QlOYvMuG3_gr6" x1="24" x2="24" y1="8.446" y2="27.811" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e05141"></stop><stop offset="1" stop-color="#de4735"></stop></linearGradient><path fill="url(#6769YB8EDCGhMGPdL9zwWf_ho8QlOYvMuG3_gr6)" d="M42.485,8h-0.3L24,21.172L5.815,8h-0.3C4.126,8,3,9.126,3,10.515v0.278	c0,0.914,0.438,1.772,1.178,2.308L24,27.459l19.822-14.358C44.562,12.565,45,11.707,45,10.793v-0.278C45,9.126,43.874,8,42.485,8z"></path>
-                        </svg>
-                    </span>
-                    <span>ایمیل</span>
+                <!-- lindedin -->
+                <a href="https://www.linkedin.com/in/mohammadrezafaramarziii" class="flex items-center justify-center bg-red-500 hover:bg-red-600 dark:text-slate-900 duration-100 text-white rounded-full p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 448 512"><path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2c-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3c94 0 111.28 61.9 111.28 142.3V448z"/></svg>
                 </a>
 
+                <!-- github -->
+                <a href="https://github.com/mohammadrezafaramarziii" class="flex items-center justify-center bg-red-500 hover:bg-red-600 dark:text-slate-900 duration-100 text-white rounded-full p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.247a10 10 0 0 0-3.162 19.487c.5.088.687-.212.687-.475c0-.237-.012-1.025-.012-1.862c-2.513.462-3.163-.613-3.363-1.175a3.636 3.636 0 0 0-1.025-1.413c-.35-.187-.85-.65-.013-.662a2.001 2.001 0 0 1 1.538 1.025a2.137 2.137 0 0 0 2.912.825a2.104 2.104 0 0 1 .638-1.338c-2.225-.25-4.55-1.112-4.55-4.937a3.892 3.892 0 0 1 1.025-2.688a3.594 3.594 0 0 1 .1-2.65s.837-.262 2.75 1.025a9.427 9.427 0 0 1 5 0c1.912-1.3 2.75-1.025 2.75-1.025a3.593 3.593 0 0 1 .1 2.65a3.869 3.869 0 0 1 1.025 2.688c0 3.837-2.338 4.687-4.563 4.937a2.368 2.368 0 0 1 .675 1.85c0 1.338-.012 2.413-.012 2.75c0 .263.187.575.687.475A10.005 10.005 0 0 0 12 2.247Z"/></svg>
+                </a>
             </div>
-        </section>
-        <!-- --------- call data end --------- -->
-
-    </div>    
-    
-
-
-
-    <!-- ----------- footer start ---------- -->
-    <footer class="bg-slate-300 flex flex-col-reverse md:flex-row items-center justify-between p-5 px-2 md:px-5 gap-3">
-        <div>
-            <p class="text-slate-900 text-sm">ساخته شده توسط محمدرضا فرامرزی :))</p>
         </div>
-
-        <div class="flex items-center gap-1">
-            <!-- telegram -->
-            <a href="https://t.me/mohammadrezafaramarziii" target="_blank" title="Telegram" class="flex items-center justify-center p-1 rounded-full border-2 border-slate-600 text-slate-600 duration-300 hover:bg-red-500 hover:text-white hover:border-red-500">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 48 48">
-                    <path fill="currentColor" d="M41.42 7.309s3.885-1.515 3.56 2.164c-.107 1.515-1.078 6.818-1.834 12.553l-2.59 16.99s-.216 2.489-2.159 2.922c-1.942.432-4.856-1.515-5.396-1.948c-.432-.325-8.094-5.195-10.792-7.575c-.756-.65-1.62-1.948.108-3.463L33.648 18.13c1.295-1.298 2.59-4.328-2.806-.649l-15.11 10.28s-1.727 1.083-4.964.109l-7.016-2.165s-2.59-1.623 1.835-3.246c10.793-5.086 24.068-10.28 35.831-15.15Z"/>
-                </svg>
-            </a>
-
-            <!-- github -->
-            <a href="https://github.com/mohammadrezafaramarziii" target="_blank" title="Github" class="flex items-center justify-center p-1 rounded-full border-2 border-slate-600 text-slate-600 duration-300 hover:bg-red-500 hover:text-white hover:border-red-500">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24">
-                    <path fill="currentColor" fill-rule="evenodd" d="M11.999 1C5.926 1 1 5.925 1 12c0 4.86 3.152 8.983 7.523 10.437c.55.102.75-.238.75-.53c0-.26-.009-.952-.014-1.87c-3.06.664-3.706-1.475-3.706-1.475c-.5-1.27-1.221-1.61-1.221-1.61c-.999-.681.075-.668.075-.668c1.105.078 1.685 1.134 1.685 1.134c.981 1.68 2.575 1.195 3.202.914c.1-.71.384-1.195.698-1.47c-2.442-.278-5.01-1.222-5.01-5.437c0-1.2.428-2.183 1.132-2.952c-.114-.278-.491-1.397.108-2.91c0 0 .923-.297 3.025 1.127A10.536 10.536 0 0 1 12 6.32a10.49 10.49 0 0 1 2.754.37c2.1-1.424 3.022-1.128 3.022-1.128c.6 1.514.223 2.633.11 2.911c.705.769 1.13 1.751 1.13 2.952c0 4.226-2.572 5.156-5.022 5.428c.395.34.747 1.01.747 2.037c0 1.47-.014 2.657-.014 3.017c0 .295.199.637.756.53C19.851 20.979 23 16.859 23 12c0-6.075-4.926-11-11.001-11"/>
-                </svg>
-            </a>
-
-            <!-- linkedin -->
-            <a href="https://www.linkedin.com/in/mohammadrezafaramarziii/" target="_blank" title="Linkedin" class="flex items-center justify-center p-1 rounded-full border-2 border-slate-600 text-slate-600 duration-300 hover:bg-red-500 hover:text-white hover:border-red-500">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24">
-                    <path fill="currentColor" fill-rule="evenodd" d="M9.429 8.969h3.714v1.85c.535-1.064 1.907-2.02 3.968-2.02c3.951 0 4.889 2.118 4.889 6.004V22h-4v-6.312c0-2.213-.535-3.461-1.897-3.461c-1.889 0-2.674 1.345-2.674 3.46V22h-4V8.969ZM2.57 21.83h4V8.799h-4V21.83ZM7.143 4.55a2.53 2.53 0 0 1-.753 1.802a2.573 2.573 0 0 1-1.82.748a2.59 2.59 0 0 1-1.818-.747A2.548 2.548 0 0 1 2 4.55c0-.677.27-1.325.753-1.803A2.583 2.583 0 0 1 4.571 2c.682 0 1.336.269 1.819.747c.482.478.753 1.126.753 1.803Z" clip-rule="evenodd"/>
-                </svg>
-            </a>
-
-            <!-- email -->
-            <a href="mailto:mf575583@gmail.com" target="_blank" title="Email" class="flex items-center justify-center p-1 rounded-full border-2 border-slate-600 text-slate-600 duration-300 hover:bg-red-500 hover:text-white hover:border-red-500">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24">
-                    <path fill="currentColor" d="M12 22q-2.05 0-3.875-.788q-1.825-.787-3.187-2.15q-1.363-1.362-2.15-3.187Q2 14.05 2 12q0-2.075.788-3.887q.787-1.813 2.15-3.175Q6.3 3.575 8.125 2.787Q9.95 2 12 2q2.075 0 3.887.787q1.813.788 3.175 2.151q1.363 1.362 2.15 3.175Q22 9.925 22 12v1.45q0 1.475-1.012 2.512Q19.975 17 18.5 17q-.9 0-1.675-.4t-1.275-1.05q-.675.675-1.587 1.063Q13.05 17 12 17q-2.075 0-3.537-1.463Q7 14.075 7 12t1.463-3.538Q9.925 7 12 7t3.538 1.462Q17 9.925 17 12v1.45q0 .725.45 1.137q.45.413 1.05.413q.6 0 1.05-.413q.45-.412.45-1.137V12q0-3.275-2.363-5.638Q15.275 4 12 4Q8.725 4 6.362 6.362Q4 8.725 4 12t2.362 5.637Q8.725 20 12 20h5v2Zm0-7q1.25 0 2.125-.875T15 12q0-1.25-.875-2.125T12 9q-1.25 0-2.125.875T9 12q0 1.25.875 2.125T12 15Z"/>
-                </svg>
-            </a>
-
-            <!-- call -->
-            <button title="09365456309" class="flex items-center justify-center p-1 rounded-full border-2 border-slate-600 text-slate-600 duration-300 hover:bg-red-500 hover:text-white hover:border-red-500">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 512 512">
-                    <path fill="currentColor" d="M391 480c-19.52 0-46.94-7.06-88-30c-49.93-28-88.55-53.85-138.21-103.38C116.91 298.77 93.61 267.79 61 208.45c-36.84-67-30.56-102.12-23.54-117.13C45.82 73.38 58.16 62.65 74.11 52a176.3 176.3 0 0 1 28.64-15.2c1-.43 1.93-.84 2.76-1.21c4.95-2.23 12.45-5.6 21.95-2c6.34 2.38 12 7.25 20.86 16c18.17 17.92 43 57.83 52.16 77.43c6.15 13.21 10.22 21.93 10.23 31.71c0 11.45-5.76 20.28-12.75 29.81c-1.31 1.79-2.61 3.5-3.87 5.16c-7.61 10-9.28 12.89-8.18 18.05c2.23 10.37 18.86 41.24 46.19 68.51s57.31 42.85 67.72 45.07c5.38 1.15 8.33-.59 18.65-8.47c1.48-1.13 3-2.3 4.59-3.47c10.66-7.93 19.08-13.54 30.26-13.54h.06c9.73 0 18.06 4.22 31.86 11.18c18 9.08 59.11 33.59 77.14 51.78c8.77 8.84 13.66 14.48 16.05 20.81c3.6 9.53.21 17-2 22c-.37.83-.78 1.74-1.21 2.75a176.49 176.49 0 0 1-15.29 28.58c-10.63 15.9-21.4 28.21-39.38 36.58A67.42 67.42 0 0 1 391 480Z"/>
-                </svg>
-            </button>
-
-        </div>
-
     </footer>
-    <!-- ----------- footer end ---------- -->
+    <!-- *************** footer end *************** -->
 
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./assets/js/main.js"></script>
 </body>
 </html>
