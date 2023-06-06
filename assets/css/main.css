@@ -1011,20 +1011,12 @@ video {
   background-image: url('../img/rabin-sharma.jpeg');
 }
 
-.bg-\[url\(\'\.\.\/img\/steave-jobs\.jpeg\'\)\] {
-  background-image: url('../img/steave-jobs.jpeg');
-}
-
-.bg-\[url\(\'\.\.\/img\/robert-\.jpg\'\)\] {
-  background-image: url('../img/robert-.jpg');
-}
-
-.bg-\[url\(\'\.\.\/img\/robert-kalier\.jpeg\'\)\] {
-  background-image: url('../img/robert-kalier.jpeg');
-}
-
 .bg-\[url\(\'\.\.\/img\/robert-kalier\.jpg\'\)\] {
   background-image: url('../img/robert-kalier.jpg');
+}
+
+.bg-\[url\(\'\.\.\/img\/steave-jobs\.jpeg\'\)\] {
+  background-image: url('../img/steave-jobs.jpeg');
 }
 
 .bg-cover {
@@ -1171,6 +1163,10 @@ video {
   font-weight: 700;
 }
 
+.font-medium {
+  font-weight: 500;
+}
+
 .leading-10 {
   line-height: 2.5rem;
 }
@@ -1288,6 +1284,11 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.hover\:text-red-600:hover {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
 .dark .dark\:border-red-200\/10 {
   border-color: rgb(254 202 202 / 0.1);
 }
@@ -1303,6 +1304,16 @@ video {
 
 .dark .dark\:border-slate-200\/30 {
   border-color: rgb(226 232 240 / 0.3);
+}
+
+.dark .dark\:border-slate-100 {
+  --tw-border-opacity: 1;
+  border-color: rgb(241 245 249 / var(--tw-border-opacity));
+}
+
+.dark .dark\:border-slate-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(226 232 240 / var(--tw-border-opacity));
 }
 
 .dark .dark\:bg-slate-700 {
@@ -1425,6 +1436,23 @@ video {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+
+  .sm\:gap-0 {
+    gap: 0px;
+  }
+
+  .sm\:border-l {
+    border-left-width: 1px;
+  }
+
+  .sm\:border-slate-200 {
+    --tw-border-opacity: 1;
+    border-color: rgb(226 232 240 / var(--tw-border-opacity));
+  }
+
   .sm\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
@@ -1432,6 +1460,10 @@ video {
 
   .sm\:text-\[40px\] {
     font-size: 40px;
+  }
+
+  .dark .sm\:dark\:border-slate-200\/10 {
+    border-color: rgb(226 232 240 / 0.1);
   }
 }
 
