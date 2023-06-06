@@ -884,6 +884,12 @@ video {
   overflow-y: scroll;
 }
 
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .text-ellipsis {
   text-overflow: ellipsis;
 }
@@ -952,11 +958,6 @@ video {
   border-color: rgb(226 232 240 / var(--tw-border-opacity));
 }
 
-.\!bg-slate-800 {
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(30 41 59 / var(--tw-bg-opacity)) !important;
-}
-
 .bg-black\/20 {
   background-color: rgb(0 0 0 / 0.2);
 }
@@ -980,6 +981,11 @@ video {
   background-color: rgb(226 232 240 / 0.5);
 }
 
+.bg-slate-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
+}
+
 .bg-slate-900\/50 {
   background-color: rgb(15 23 42 / 0.5);
 }
@@ -991,26 +997,6 @@ video {
 
 .bg-white\/30 {
   background-color: rgb(255 255 255 / 0.3);
-}
-
-.bg-slate-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
-}
-
-.bg-slate-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
-}
-
-.bg-slate-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
-}
-
-.bg-slate-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\.\.\/img\/gabe-logan-newell\.jpg\'\)\] {
@@ -1027,6 +1013,18 @@ video {
 
 .bg-\[url\(\'\.\.\/img\/steave-jobs\.jpeg\'\)\] {
   background-image: url('../img/steave-jobs.jpeg');
+}
+
+.bg-\[url\(\'\.\.\/img\/robert-\.jpg\'\)\] {
+  background-image: url('../img/robert-.jpg');
+}
+
+.bg-\[url\(\'\.\.\/img\/robert-kalier\.jpeg\'\)\] {
+  background-image: url('../img/robert-kalier.jpeg');
+}
+
+.bg-\[url\(\'\.\.\/img\/robert-kalier\.jpg\'\)\] {
+  background-image: url('../img/robert-kalier.jpg');
 }
 
 .bg-cover {
